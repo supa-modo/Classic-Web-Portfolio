@@ -47,7 +47,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative font-poppins bg-gradient-to-br from-[#E6F2FF] to-[#F0F9FF] text-gray-800 py-10 overflow-hidden">
+    <footer className="relative font-poppins bg-gradient-to-br from-[#dfe9f3] to-[#F0F9FF] text-gray-800 py-10 overflow-hidden">
       {/* Subtle background shapes */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-sky-200 to-blue-200 rounded-full blur-3xl animate-pulse"></div>
@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-4">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
           {/* Social Links */}
           <motion.div
             className="flex justify-center space-x-5"
