@@ -4,7 +4,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ExternalLink,
-  Github,
   Image,
   Menu,
   X,

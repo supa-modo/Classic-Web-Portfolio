@@ -7,6 +7,7 @@ import esoko1 from "../assets/images/esoko/esoko1.png";
 import esoko2 from "../assets/images/esoko/esoko2.png";
 import ilala1 from "../assets/images/ilalaCollege/ilala1.png";
 import meetings1 from "../assets/images/meetingAttendance/meetings1.png";
+import eac1 from "../assets/images/eac/eac1.png";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ const Projects = () => {
       technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
       githubLink: "#",
       liveLink: "#",
-      image: meetings1,
+      image: eac1,
     },
   ];
 

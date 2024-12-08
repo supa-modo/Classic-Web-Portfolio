@@ -1,3 +1,22 @@
+// Import images for internships project
+import eac1 from "../assets/images/eac/eac1.png";
+import eac2 from "../assets/images/eac/eac2.png";
+import eac3 from "../assets/images/eac/eac3.png";
+// Import images for msafiri project
+import msafiri1 from "../assets/images/msafiri/msafiri1.jpg";
+import msafiri2 from "../assets/images/msafiri/msafiri2.jpg";
+import msafiri3 from "../assets/images/msafiri/msafiri3.jpg";
+// Import images for farm project
+import farm1 from "../assets/images/flutter-farm/farm1.jpg";
+import farm2 from "../assets/images/flutter-farm/farm2.jpg";
+import farm3 from "../assets/images/flutter-farm/farm3.jpg";
+import farm4 from "../assets/images/flutter-farm/farm4.jpg";
+import farm5 from "../assets/images/flutter-farm/farm5.jpg";
+import farm6 from "../assets/images/flutter-farm/farm6.jpg";
+import farm7 from "../assets/images/flutter-farm/farm7.jpg";
+import farm8 from "../assets/images/flutter-farm/farm8.jpg";
+import farm9 from "../assets/images/flutter-farm/farm9.jpg";
+import farm10 from "../assets/images/flutter-farm/farm10.jpg";
 // Import images for eSoko project
 import esoko1 from "../assets/images/esoko/esoko1.png";
 import esoko2 from "../assets/images/esoko/esoko2.png";
@@ -94,6 +113,9 @@ const projectImages = {
     meetings10,
     meetings11,
   ],
+  eac: [eac1, eac2, eac3],
+  msafiri: [msafiri1, msafiri2, msafiri3],
+  farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
 };
 
 export const projects = [
@@ -111,8 +133,8 @@ export const projects = [
       "Sequelize",
     ],
     images: projectImages.esoko,
-    githubLink: "https://github.com/yourusername/esoko",
-    liveLink: "https://esoko-demo.com",
+    githubLink: "https://github.com/private-repo/esoko",
+    liveLink: "https://icy-smoke-09e427410.4.azurestaticapps.net/",
   },
   {
     name: "Ilala City College Website",
@@ -120,8 +142,8 @@ export const projects = [
       "A static frontend-only website as a landing page for a City Institue of Health and Allied Sciences to showcase their school and programmes offered with information on the application process and requirements, external links to the application portal and downloadable application documents and guides.",
     tags: ["React", "Node.js", "MongoDB", "Socket.IO"],
     images: projectImages.ilala,
-    githubLink: "https://github.com/yourusername/ilala-college",
-    liveLink: "https://ilala-college.com",
+    githubLink: "https://github.com/supa-modo/Ilala-College-Website",
+    liveLink: "https://polite-pond-007a7b010.4.azurestaticapps.net/",
   },
   {
     name: "Meeting Attendance Application",
@@ -129,7 +151,7 @@ export const projects = [
       "An admin dashboard for managing meeting attendance and analytics, taking records of participant attendance with digital signing and attendance report generation. Also includes a participant directory with contact information and records of all meetings attended by each recorded participant",
     tags: ["React", "Express", "PostgreSQL", "Chart.js"],
     images: projectImages.meetings,
-    githubLink: "https://github.com/yourusername/meeting-tracker",
+    githubLink: "https://github.com/supa-modo/meetings-app",
     liveLink: "https://meeting-tracker-demo.com",
   },
   {
@@ -138,7 +160,8 @@ export const projects = [
       "An admin dashboard for managing and tracking location of departmental assets, inventory, and stock. Has functionalities to notify admin on restcockable items with low inventory and also has a borrowing and return setup for lending of IT equipment for temporary usage. Notifies of overdue unreturned inventory witha clean dashboard ",
     tags: ["React", "Express", "PostgreSQL", "Chart.js"],
     images: [],
-    githubLink: "https://github.com/yourusername/ecommerce-dashboard",
+    githubLink:
+      "https://github.com/supa-modo/IT-Assets-Inventory-and-Borrowing",
     liveLink: "https://ecommerce-dashboard-demo.com",
   },
   {
@@ -154,9 +177,18 @@ export const projects = [
       "JsPDF",
       "Sequelize",
     ],
-    images: [],
-    githubLink: "https://github.com/yourusername/workout-tracker",
-    liveLink: "https://workout-tracker-demo.com",
+    images: projectImages.eac,
+    githubLink: "https://github.com/supa-modo/internship-web-portal",
+    liveLink: "https://green-ocean-080f7b703.5.azurestaticapps.net/",
+  },
+  {
+    name: "Flutter Farm Adverts App",
+    description:
+      "My very first flutter application designed to help farmers advertise their crops and livestock products for sale to potential buyers. Connected it to the government's agriculture website that regulates standard prices of agricultural produce so farmers and buyers could check on the regulated prices from the app and adjust their prices.",
+    tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
+    images: projectImages.farm,
+    githubLink: "https://github.com/supa-modo/FlutterAppProject-4.0",
+    liveLink: "https://pos-system-demo.com",
   },
   {
     name: "Sacco Welfare Loans & Savings App",
@@ -164,17 +196,17 @@ export const projects = [
       "A full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records.",
     tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
     images: [],
-    githubLink: "https://github.com/yourusername/blog-platform",
-    liveLink: "https://blog-platform-demo.com",
+    githubLink: "https://github.com/supa-modo/sacco-welfare",
+    liveLink: "https://sacco-welfare-demo.com",
   },
   {
     name: "Msafiri Public Transport App",
     description:
       "A full-stack flutter application for managing and accesing payments in matatus in Kenya with integrated Mpesa payments and google maps to track and set your destinations. Matatu operators get notifications on alighting passengers on reaching destinations. Dashboard with stats and reports payments and amount made by operators.",
     tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
-    images: [],
-    githubLink: "https://github.com/yourusername/blog-platform",
-    liveLink: "https://blog-platform-demo.com",
+    images: projectImages.msafiri,
+    githubLink: "https://github.com/supa-modo/Msafiri-Flutter-App-Project",
+    liveLink: "https://msafiri-demo.com",
   },
   {
     name: "Tours & Safaris Website",
@@ -182,8 +214,8 @@ export const projects = [
       "A static webapp for a tours and safaris company to showcase their destinations and sites and receive enquiries and communications with potential clients",
     tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
     images: [],
-    githubLink: "https://github.com/yourusername/blog-platform",
-    liveLink: "https://blog-platform-demo.com",
+    githubLink: "https://github.com/supa-modo/tours-travel",
+    liveLink: "https://tours11-demo.com",
   },
   {
     name: "POS System with C#",
@@ -191,7 +223,7 @@ export const projects = [
       "A desktop app created with C# and sql to manage point of sale records and sales with additional features of inventory and stock management.",
     tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
     images: [],
-    githubLink: "https://github.com/yourusername/blog-platform",
-    liveLink: "https://blog-platform-demo.com",
+    githubLink: "https://github.com/supa-modo/POSales-System",
+    liveLink: "https://pos-system-demo.com",
   },
 ];
