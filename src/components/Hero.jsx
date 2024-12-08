@@ -6,7 +6,12 @@ import profileImg from "/photo.jpg?url";
 
 const HeroAbout = () => {
   const handleDownloadResume = () => {
-    window.open("/path/to/your/resume.pdf", "_blank");
+    const link = document.createElement("a");
+    link.href = "/EddyOchiengOdhiambo-Resume.pdf";
+    link.download = "EddyOchiengOdhiambo-Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const stats = [
@@ -42,8 +47,8 @@ const HeroAbout = () => {
 
   return (
     <section
-      id="home"
-      className="relative py-16 md:pt-36 font-poppins overflow-hidden"
+      id="hero"
+      className="relative py-16 md:pt-48 font-poppins overflow-hidden"
     >
       {/* Subtle Background Gradient */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
@@ -97,21 +102,21 @@ const HeroAbout = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center pt-2 space-x-4">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownloadResume}
-                className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg shadow-md hover:shadow-lg transition-all"
+                className="px-6 py-2 bg-gradient-to-br from-secondary to-primary/30 text-white rounded-lg shadow-md hover:shadow-lg transition-all"
               >
                 <div className="flex items-center space-x-2">
                   <Download size={18} />
-                  <span>Download Resume</span>
+                  <span>Download my CV / Resume</span>
                 </div>
               </motion.button>
 
               {/* Social Links */}
-              <div className="flex space-x-3">
+              <div className="flex space-x-6">
                 {socialLinks.map((link, index) => (
                   <motion.a
                     key={index}
@@ -122,7 +127,7 @@ const HeroAbout = () => {
                     whileTap={{ scale: 0.9 }}
                   >
                     <link.icon
-                      size={24}
+                      size={26}
                       color={link.color}
                       className="hover:text-opacity-80 transition-all"
                     />

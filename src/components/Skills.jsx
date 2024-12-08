@@ -73,6 +73,7 @@ const Skills = () => {
       icon: HiOutlineDesktopComputer,
       color: "#5E81AC",
     },
+    // { name: "Microsoft Exchange", icon: VscAzure, color: "#0089D6" },
     { name: "DNS Configuration", icon: VscAzure, color: "#0089D6" },
     { name: "Technical Support", icon: HiSupport, color: "#4A90E2" },
     { name: "User Training", icon: FaUserTie, color: "#2ECC71" },
@@ -85,7 +86,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 md:py-24 font-poppins">
+    <section id="skills" className="py-16 md:py-20 font-poppins">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">

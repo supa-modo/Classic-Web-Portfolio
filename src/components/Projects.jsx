@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
@@ -8,6 +9,7 @@ import ilala1 from "../assets/images/ilalaCollege/ilala1.png";
 import meetings1 from "../assets/images/meetingAttendance/meetings1.png";
 
 const Projects = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       name: "Health College Website",
@@ -57,7 +59,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 font-poppins">
+    <section id="projects" className="py-16 font-poppins ">
       <div className="md:px-20 px-3 mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
@@ -129,9 +131,14 @@ const Projects = () => {
                         "linear-gradient(to left, rgba(130, 206, 220, 0.6), rgba(230, 230, 230, 1))",
                       color: "#048",
                     }}
-                    className="flex items-center text-sm mx-2 font-semibold hover:text-white hover:bg-gray-600 gap-2 px-5 py-2  text-secondary-two rounded-md transition-transform transform hover:scale-105"
+                    className="group flex items-center text-sm mx-2 font-semibold hover:text-white hover:bg-gray-600 gap-2 px-5 py-2  text-secondary-two rounded-md transition-transform transform hover:scale-105"
                   >
-                    Live Demo <ExternalLink color="#048" size={16} />
+                    Live Demo{" "}
+                    <ExternalLink
+                      color="#048"
+                      size={16}
+                      className="group-hover:translate-x-2 transition-transform"
+                    />
                   </a>
                 </div>
               </div>
@@ -141,10 +148,15 @@ const Projects = () => {
 
         {/* View All Projects Button */}
         <div className="text-center mt-8">
-          <button className="px-9 py-[11px] font-semibold border border-gray-300 text-white rounded-xl shadow-lg transition-transform transform hover:scale-105 bg-gradient-to-br from-secondary to-primary/30">
+          <button
+            onClick={() => {
+              navigate("/projects");
+            }}
+            className="group px-9 py-[11px] font-semibold border border-gray-300 text-white rounded-xl shadow-lg transition-transform transform hover:scale-105 bg-gradient-to-br from-secondary to-primary/30"
+          >
             <div className="flex space-x-3">
               <span className="">View All My Projects</span>
-              <ChevronRight />
+              <ChevronRight className="group-hover:translate-x-2 transition-transform" />
             </div>
           </button>
         </div>
