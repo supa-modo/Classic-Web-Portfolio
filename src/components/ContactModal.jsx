@@ -79,25 +79,25 @@ const ContactModal = ({ isOpen, onClose }) => {
   const socialLinks = [
     {
       icon: FaWhatsapp,
-      href: "https://wa.me/+254700000000",
+      href: "https://wa.me/254790193402",
       color: "#25D366",
       label: "WhatsApp",
     },
     {
       icon: FaXTwitter,
-      href: "https://twitter.com/your_username",
+      href: "https://x.com/@eddieoochieng",
       color: "#1DA1F2",
       label: "Twitter (X)",
     },
     {
       icon: FaInstagram,
-      href: "https://instagram.com/your_profile",
+      href: "https://instagram.com/eddy.odhiambo_",
       color: "#E4405F",
       label: "Instagram",
     },
     {
       icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/your_profile",
+      href: "https://linkedin.com/in/eddy-o-odhiambo",
       color: "#0A66C2",
       label: "LinkedIn",
     },
