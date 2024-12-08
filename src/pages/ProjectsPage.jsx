@@ -48,7 +48,7 @@ const ProjectsPage = () => {
   useEffect(() => {
     if (projects[currentProject].images.length <= 1) return;
 
-    const timer = setInterval(handleNextImage, 5000);
+    const timer = setInterval(handleNextImage, 4000);
     return () => clearInterval(timer);
   }, [currentProject, currentImage]);
 
@@ -69,8 +69,8 @@ const ProjectsPage = () => {
             />
           </h2>
           <p className="pb-2">
-            Choose the project to view from the left Navigation to view it on
-            the right. Click on an image to view or zoom
+            Choose a project from the left Navigation to view it on the right
+            section. Click on an image to view or zoom fullscreen.
           </p>
         </div>
 
