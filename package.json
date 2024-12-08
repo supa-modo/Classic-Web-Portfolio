@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
     "@mui/icons-material": "^6.1.10",
     "@mui/lab": "^6.0.0-beta.18",
     "@mui/material": "^6.1.10",
+    "emailjs": "^4.0.3",
     "framer-motion": "^11.13.1",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",

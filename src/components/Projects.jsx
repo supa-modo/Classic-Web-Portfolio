@@ -12,45 +12,47 @@ const Projects = () => {
   const navigate = useNavigate();
   const projects = [
     {
-      name: "Health College Website",
+      name: "Ilala City College Website",
       description:
-        "Static frontend only website as a landing page for a health college to showcase their school and programmes offered",
+        "A static frontend-only website as a landing page for a City Institue of Health and Allied Sciences to showcase their school and programmes offered with information on the application process and requirements, external links to the application portal and downloadable application documents and guides.",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
       githubLink: "#",
       liveLink: "#",
       image: ilala1,
     },
     {
-      name: "E-commerce Fashion Store Website",
+      name: "eSoko E-commerce Fashion Store",
       description:
-        "Full-stack ecommerce platform for buyer and seller interaction in the sale of fashion clothes and accessories",
+        "A full-stack e-commerce platform that connects buyers to eSoko's fashion collection of men's, women's and children's clothes and accessories.",
       technologies: ["Flutter", "Firebase", "GetX"],
       githubLink: "#",
       liveLink: "#",
       image: esoko2,
     },
     {
-      name: "E-commerce Dashboard",
+      name: "Meeting Attendance Application",
       description:
-        "Admin dashboard for managing products, orders, and analytics.",
+        "An admin dashboard for managing meeting attendance and analytics, taking records of participant attendance with digital signing and attendance report generation. Also includes a participant directory with contact information and records of all meetings attended by each recorded participant",
+
       technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
       githubLink: "#",
       liveLink: "#",
       image: meetings1,
     },
     {
-      name: "E-commerce Fashion Store Website",
+      name: "IT Assets Management App",
       description:
-        "Cross-platform mobile app for tracking workout routines and progress.",
+        "An admin dashboard for managing and tracking location of departmental assets, inventory, and stock. Has functionalities to notify admin on restcockable items with low inventory and also has a borrowing and return setup for lending of IT equipment for temporary usage. Notifies of overdue unreturned inventory witha clean dashboard ",
+
       technologies: ["Flutter", "Firebase", "GetX"],
       githubLink: "#",
       liveLink: "#",
       image: esoko1,
     },
     {
-      name: "E-commerce Dashboard",
+      name: "Internships Web Portal Mngmt",
       description:
-        "Admin dashboard for managing products, orders, and analytics.",
+        "A portal for accepting internship applications from applicants with an admin side for managing the recieved applications. Admin console has functionalities to review, approve, archive and extend ongoing and new internships to the organization. Acceptance and Extension Letters are automatically system generated on approval with the correct applicant's details set. Generates reports of all applications on request.",
       technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
       githubLink: "#",
       liveLink: "#",
@@ -62,7 +64,7 @@ const Projects = () => {
     <section id="projects" className="min-h-screen pb-8 font-poppins">
       <div className="md:px-20 px-3 mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-4 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
             Projects Completed
             <motion.div
               initial={{ width: 0 }}
@@ -74,6 +76,10 @@ const Projects = () => {
               className="absolute mx-auto bottom-[-12px] left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
             />
           </h2>
+          <p className="pb-1">
+            Click on View All Projects button below this section to view and
+            browse more about all my projects done.
+          </p>
         </div>
 
         {/* Project Grid */}

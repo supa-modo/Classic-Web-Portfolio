@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send } from "lucide-react";
 import {
@@ -10,11 +11,70 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 
 const ContactModal = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const [formData, setFormData] = useState({
-    email: "",
+    from_email: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef();
+  const [statusMessage, setStatusMessage] = useState("");
+  const [formErrors, setFormErrors] = useState({});
+
+  const validateForm = (formData) => {
+    const errors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validate email
+    if (!formData.from_email || !emailRegex.test(formData.from_email)) {
+      errors.from_email = "Please enter a valid email address!!!";
+    }
+
+    // Validate message
+    if (!formData.message || formData.message.trim() === "") {
+      errors.message = "Message cannot be empty!!!S";
+    }
+
+    return errors;
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const errors = validateForm(formData);
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
+    setIsSubmitting(true);
+    setFormErrors({});
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setStatusMessage(
+            "Your message has been sent successfully! I will reply back as soon as possible"
+          );
+          console.log("Email sent:", result.text);
+          setFormData({ from_email: "", message: "" }); // Reset form
+        },
+        (error) => {
+          console.error("Error:", error.text);
+          setStatusMessage("Failed to send message. Please try again.");
+        }
+      )
+      .finally(() => setIsSubmitting(false));
+  };
 
   const socialLinks = [
     {
@@ -43,28 +103,12 @@ const ContactModal = ({ isOpen, onClose }) => {
     },
   ];
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Add your form submission logic here
-      console.log("Form submitted:", formData);
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      onClose();
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
@@ -101,7 +145,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 as possible
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={sendEmail} className="space-y-6">
                 <div>
                   <label
                     htmlFor="email"
@@ -112,11 +156,11 @@ const ContactModal = ({ isOpen, onClose }) => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="from_email"
                     required
-                    value={formData.email}
+                    value={formData.from_email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5  text-sm rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary/50 focus:border-primary dark:bg-gray-600 dark:text-white transition-all"
+                    className="w-full px-4 py-2.5 text-sm rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary/50 focus:border-primary dark:bg-gray-600 dark:text-white transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -143,7 +187,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 px-6 bg-gradient-to-br from-primary/60 to-secondary text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 group disabled:opacity-70"
+                  className="w-full py-3 px-6 bg-gradient-to-br from-primary/60 to-secondary text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <span>Sending...</span>
@@ -158,6 +202,9 @@ const ContactModal = ({ isOpen, onClose }) => {
                   )}
                 </button>
               </form>
+              {statusMessage && (
+                <p className="text-sm text-green-500 mt-4">{statusMessage}</p>
+              )}
 
               {/* Social Links Section */}
               <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-700">

@@ -22,25 +22,25 @@ const Footer = () => {
     },
     {
       icon: FaWhatsapp,
-      href: "https://dribbble.com/your-profile",
+      href: "https://wa.me/254790193402",
       color: "#2E8B57",
       label: "Whatsapp",
     },
     {
       icon: FaInstagram,
-      href: "https://instagram.com/your-profile",
+      href: "https://instagram.com/eddy.odhiambo_",
       color: "#E4405F",
       label: "Instagram",
     },
     {
       icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/your-profile",
+      href: "https://linkedin.com/in/eddy-o-odhiambo",
       color: "#4299E1",
       label: "LinkedIn",
     },
     {
       icon: FaEnvelope,
-      href: "mailto:your-email@example.com",
+      href: "mailto:eddieodhiambo11@gmail.com",
       color: "#718096",
       label: "Email",
     },
@@ -101,7 +101,7 @@ const Footer = () => {
               your creative vision to life?
             </p>
             <motion.a
-              href="mailto:your-email@example.com"
+              href="mailto:eddieodhiambo11@gmail.com"
               className="inline-block group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

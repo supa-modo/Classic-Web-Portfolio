@@ -100,7 +100,7 @@ export const projects = [
   {
     name: "eSoko E-commerce Fashion Store",
     description:
-      "A full-stack e-commerce platform for that connects buyers to eSoko's fashion collection of men's, women's and children's clothes and accessories.",
+      "A full-stack e-commerce platform that connects buyers to eSoko's fashion collection of men's, women's and children's clothes and accessories.",
     tags: [
       "React",
       "Vite",
@@ -115,7 +115,7 @@ export const projects = [
     liveLink: "https://esoko-demo.com",
   },
   {
-    name: "Health College Website",
+    name: "Ilala City College Website",
     description:
       "A static frontend-only website as a landing page for a City Institue of Health and Allied Sciences to showcase their school and programmes offered with information on the application process and requirements, external links to the application portal and downloadable application documents and guides.",
     tags: ["React", "Node.js", "MongoDB", "Socket.IO"],
