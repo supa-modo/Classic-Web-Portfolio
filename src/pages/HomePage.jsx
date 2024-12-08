@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import Experience from "./Experience";
+import Experience from "./ExperiencePage";
 import Footer from "../components/Footer";
 
 const Home = () => {

@@ -41,7 +41,10 @@ const HeroAbout = () => {
   ];
 
   return (
-    <section className="relative py-16 md:pt-36 font-poppins overflow-hidden">
+    <section
+      id="home"
+      className="relative py-16 md:pt-36 font-poppins overflow-hidden"
+    >
       {/* Subtle Background Gradient */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-sky-200 to-blue-200 rounded-full blur-3xl animate-pulse"></div>
@@ -63,14 +66,15 @@ const HeroAbout = () => {
                 Eddy Ochieng Odhiambo
               </h1>
               <h2 className="text-2xl font-semibold text-gray-500 mt-2">
-                FullStack Software Developer & Creative Technologist
+                A FullStack Software Developer & Creative Technologist
               </h2>
             </div>
 
             <p className="text-gray-600 leading-relaxed">
-              Passionate developer crafting innovative digital solutions with a
-              blend of creativity and technical expertise. Transforming ideas
-              into elegant, efficient code.
+              I am a passionate developer crafting innovative and competent
+              digital solutions with a blend of creativity and technical
+              expertise. Transforming ideas into elegant, efficient professional
+              code.
             </p>
 
             {/* Skills Highlight */}

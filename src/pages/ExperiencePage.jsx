@@ -31,7 +31,7 @@ const Experience = () => {
   ];
 
   return (
-    <Box sx={{ minHeight: "100vh", pt: 10 }}>
+    <Box sx={{ minHeight: "100vh", pt: 16 }}>
       <Container className="font-poppins">
         <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
           Professional Work Experience

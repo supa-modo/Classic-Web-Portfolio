@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
-import Skills from "./pages/Skills";
-import Header from "./components/Header";
+import Home from "./pages/HomePage";
+import Projects from "./pages/ProjectsPage";
+import Experience from "./pages/ExperiencePage";
+import Skills from "./pages/SkillsPage";
 import Footer from "./components/Footer";
 
 const theme = createTheme({
