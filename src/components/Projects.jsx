@@ -59,10 +59,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 font-poppins ">
+    <section id="projects" className="min-h-screen pb-8 font-poppins">
       <div className="md:px-20 px-3 mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-4 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
             Projects Completed
             <motion.div
               initial={{ width: 0 }}
@@ -93,7 +93,7 @@ const Projects = () => {
                   <h3 className="text-xl font-semibold text-background mb-2">
                     {project.name}
                   </h3>
-                  <p className="text-background/80 text-sm">
+                  <p className="text-background/80 text-sm line-clamp-4">
                     {project.description}
                   </p>
                 </div>

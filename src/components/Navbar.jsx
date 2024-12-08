@@ -123,19 +123,26 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="fixed inset-0 bg-white/95 backdrop-blur-md z-40 md:hidden"
+              transition={{ duration: 0.2 }}
+              className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 py-4 px-4 md:hidden"
             >
-              <div className="flex flex-col items-center justify-center h-full space-y-8">
+              <div className="container mx-auto space-y-2">
                 {navItems.map((item, index) => (
                   <motion.button
                     key={item.name}
                     onClick={() => handleNavigation(item)}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-xl font-semibold text-gray-800 hover:text-primary transition-colors"
+                    className="w-full text-left px-4 py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-all flex items-center justify-between group"
                   >
-                    {item.name}
+                    <span className="font-medium">{item.name}</span>
+                    <motion.div
+                      initial={{ x: -4, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: index * 0.1 + 0.2 }}
+                      className="w-1.5 h-1.5 rounded-full bg-primary transform scale-0 group-hover:scale-100 transition-transform"
+                    />
                   </motion.button>
                 ))}
                 <motion.button
@@ -143,12 +150,16 @@ const Navbar = () => {
                     setIsContactModalOpen(true);
                     setIsOpen(false);
                   }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: navItems.length * 0.1 }}
-                  className="px-8 py-3 bg-gradient-to-br from-primary to-secondary text-white rounded-lg shadow-md hover:shadow-lg transition-all"
+                  className="w-full mt-2 px-4 py-2.5 bg-gradient-to-br from-primary to-secondary text-white rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
                 >
-                  Contact Me
+                  <TbMessage 
+                    size={18} 
+                    className="group-hover:animate-bounce"
+                  />
+                  <span className="font-medium">Contact Me</span>
                 </motion.button>
               </div>
             </motion.div>

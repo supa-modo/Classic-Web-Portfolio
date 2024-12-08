@@ -89,6 +89,7 @@ const HeroAbout = () => {
                 "Node.js",
                 "Express",
                 "Flutter",
+                "SqlServer",
                 "MongoDB",
                 "PostgreSQL",
               ].map((skill) => (

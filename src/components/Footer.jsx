@@ -121,7 +121,7 @@ const Footer = () => {
           >
             <p>© {currentYear} Eddy Ochieng Odhiambo. All Rights Reserved.</p>
             <p className="text-xs mt-2 text-gray-400">
-              Crafted with creativity and passion
+              Crafted with creativity and passion 😎👍
             </p>
           </motion.div>
         </div>

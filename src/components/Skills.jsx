@@ -10,6 +10,8 @@ import {
   SiPostgresql,
   SiSequelize,
   SiKubernetes,
+  SiTailwindcss,
+  SiNextdotjs,
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import {
@@ -33,6 +35,7 @@ const Skills = () => {
         { name: "ReactJS", icon: SiReact, color: "#61DAFB" },
         { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
         { name: "Flutter", icon: SiFlutter, color: "#02569B" },
+        { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
       ],
     },
     {
@@ -40,6 +43,8 @@ const Skills = () => {
       skills: [
         { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
         { name: "Express", icon: SiExpress, color: "#000000" },
+
+        { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
       ],
     },
     {
@@ -122,9 +127,9 @@ const Skills = () => {
                       key={skillIndex}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex flex-col items-center space-y-2 p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group"
+                      className="flex flex-col items-center space-y-2 p-2 rounded-lg hover:bg-gray-200 transition-colors cursor-pointer group"
                     >
-                      <div className="bg-gray-100 p-3 rounded-full group-hover:bg-gray-300 transition-colors">
+                      <div className="bg-gray-200 p-3 rounded-full group-hover:bg-gray-300 transition-colors">
                         <skill.icon
                           size={30}
                           color={skill.color}
