@@ -48,7 +48,7 @@ const HeroAbout = () => {
   return (
     <section
       id="hero"
-      className="relative py-16 md:pt-48 font-poppins overflow-hidden"
+      className="relative py-24 md:pt-48 font-poppins overflow-hidden"
     >
       {/* Subtle Background Gradient */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">

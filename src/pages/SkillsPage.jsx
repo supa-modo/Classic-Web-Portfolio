@@ -53,7 +53,7 @@ const Skills = () => {
   ];
 
   return (
-    <Box sx={{ minHeight: "100vh", py: 10 }}>
+    <Box sx={{ minHeight: "100vh", py: 12 }}>
       <Container>
         <h2
           className="text-3xl font-bold text-gray-700  relative inline-block  pb-1 mb-8 bg-gradient-to-br from-primary to-secondary

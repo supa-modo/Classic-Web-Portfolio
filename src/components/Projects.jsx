@@ -62,7 +62,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen pb-8 font-poppins">
+    <section id="projects" className="min-h-screen pt-6 pb-8 font-poppins">
       <div className="md:px-20 px-3 mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
