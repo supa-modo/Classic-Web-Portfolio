@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
         </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   );

@@ -6,8 +6,8 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        { name: "React", level: 90 },
-        { name: "JavaScript", level: 85 },
+        { name: "React", level: 85 },
+        { name: "JavaScript", level: 80 },
         { name: "Flutter", level: 80 },
       ],
     },
@@ -22,10 +22,19 @@ const Skills = () => {
     {
       title: "Databases",
       skills: [
-        { name: "MongoDB", level: 85 },
+        { name: "MongoDB", level: 70 },
         { name: "SQL Server", level: 80 },
         { name: "PostgreSQL", level: 80 },
-        { name: "Sequelize ORM", level: 85 },
+        { name: "Sequelize ORM", level: 70 },
+      ],
+    },
+    {
+      title: "Cloud Services & DevOps",
+      skills: [
+        { name: "Azure CLI & DevOps", level: 75 },
+        { name: "GitHub Actions", level: 80 },
+        { name: "Docker", level: 50 },
+        { name: "Kubernetes", level: 30 },
       ],
     },
     {
@@ -33,14 +42,15 @@ const Skills = () => {
       skills: [
         { name: "Linux Systems", level: 80 },
         { name: "macOS", level: 85 },
-        { name: "Ticketing Systems", level: 90 },
+        { name: "Windows", level: 100 },
+        { name: "Ticketing Systems", level: 70 },
         { name: "Technical Troubleshooting", level: 90 },
       ],
     },
   ];
 
   return (
-    <Box sx={{ minHeight: "100vh", pt: 10 }}>
+    <Box sx={{ minHeight: "100vh", py: 10 }}>
       <Container>
         <h2
           className="text-3xl font-bold text-gray-700  relative inline-block  pb-1 mb-8 bg-gradient-to-br from-primary to-secondary

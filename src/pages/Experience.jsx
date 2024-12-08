@@ -33,11 +33,17 @@ const Experience = () => {
   return (
     <Box sx={{ minHeight: "100vh", pt: 10 }}>
       <Container className="font-poppins">
-        <h2
-          className="text-3xl font-bold text-gray-700  relative inline-block  pb-1 mb-8 bg-gradient-to-br from-primary to-secondary
-      bg-clip-text text-transparent"
-        >
-          Professional Experience
+        <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+          Professional Work Experience
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            transition={{
+              duration: 1.4,
+              ease: "easeInOut",
+            }}
+            className="absolute mx-auto bottom-[-12px] left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
+          />
         </h2>
         <Timeline position="alternate">
           {experiences.map((exp, index) => (
