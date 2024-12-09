@@ -17,8 +17,8 @@ const Projects = () => {
       description:
         "A static frontend-only website as a landing page for a City Institue of Health and Allied Sciences to showcase their school and programmes offered with information on the application process and requirements, external links to the application portal and downloadable application documents and guides.",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      githubLink: "#",
-      liveLink: "#",
+      githubLink: "https://github.com/supa-modo/Ilala-College-Website",
+      liveLink: "https://polite-pond-007a7b010.4.azurestaticapps.net/",
       image: ilala1,
     },
     {
@@ -26,9 +26,9 @@ const Projects = () => {
       description:
         "A full-stack e-commerce platform that connects buyers to eSoko's fashion collection of men's, women's and children's clothes and accessories.",
       technologies: ["Flutter", "Firebase", "GetX"],
-      githubLink: "#",
-      liveLink: "#",
-      image: esoko2,
+      githubLink: "https://github.com/private-repo/esoko",
+      liveLink: "https://icy-smoke-09e427410.4.azurestaticapps.net/",
+      image: esoko1,
     },
     {
       name: "Meeting Attendance Application",
@@ -36,8 +36,8 @@ const Projects = () => {
         "An admin dashboard for managing meeting attendance and analytics, taking records of participant attendance with digital signing and attendance report generation. Also includes a participant directory with contact information and records of all meetings attended by each recorded participant",
 
       technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
-      githubLink: "#",
-      liveLink: "#",
+      githubLink: "https://github.com/supa-modo/meetings-app",
+      liveLink: "https://meeting-tracker-demo.com",
       image: meetings1,
     },
     {
@@ -46,17 +46,25 @@ const Projects = () => {
         "An admin dashboard for managing and tracking location of departmental assets, inventory, and stock. Has functionalities to notify admin on restcockable items with low inventory and also has a borrowing and return setup for lending of IT equipment for temporary usage. Notifies of overdue unreturned inventory witha clean dashboard ",
 
       technologies: ["Flutter", "Firebase", "GetX"],
-      githubLink: "#",
-      liveLink: "#",
-      image: esoko1,
+      githubLink:
+        "https://github.com/supa-modo/IT-Assets-Inventory-and-Borrowing",
+      liveLink: "https://ecommerce-dashboard-demo.com",
+      image: esoko2,
     },
     {
       name: "Internships Web Portal Mngmt",
       description:
         "A portal for accepting internship applications from applicants with an admin side for managing the recieved applications. Admin console has functionalities to review, approve, archive and extend ongoing and new internships to the organization. Acceptance and Extension Letters are automatically system generated on approval with the correct applicant's details set. Generates reports of all applications on request.",
-      technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
-      githubLink: "#",
-      liveLink: "#",
+      technologies: [
+        "React",
+        "Node",
+        "Express",
+        "SqlServer",
+        "Sequelize",
+        "Chart.js",
+      ],
+      githubLink: "https://github.com/supa-modo/internship-web-portal",
+      liveLink: "https://green-ocean-080f7b703.5.azurestaticapps.net/",
       image: eac1,
     },
   ];

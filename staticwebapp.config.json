@@ -1,0 +1,33 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/projects",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/experience",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/skills",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*", "/css/*", "/js/*", "/favicon.ico"]
+  }
+}

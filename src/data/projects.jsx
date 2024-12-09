@@ -2,6 +2,9 @@
 import eac1 from "../assets/images/eac/eac1.png";
 import eac2 from "../assets/images/eac/eac2.png";
 import eac3 from "../assets/images/eac/eac3.png";
+import eac4 from "../assets/images/eac/eac4.png";
+import eac5 from "../assets/images/eac/eac5.png";
+import eac6 from "../assets/images/eac/eac6.png";
 // Import images for msafiri project
 import msafiri1 from "../assets/images/msafiri/msafiri1.jpg";
 import msafiri2 from "../assets/images/msafiri/msafiri2.jpg";
@@ -84,9 +87,8 @@ const projectImages = {
     esoko00,
   ],
   ilala: [
-    ilala1,
     ilala01,
-    ilala2,
+    ilala1,
     ilala3,
     ilala4,
     ilala5,
@@ -96,6 +98,7 @@ const projectImages = {
     ilala9,
     ilala10,
     ilala11,
+    ilala2,
     ilala12,
     ilala13,
     ilala14,
@@ -113,7 +116,7 @@ const projectImages = {
     meetings10,
     meetings11,
   ],
-  eac: [eac1, eac2, eac3],
+  eac: [eac1, eac2, eac3, eac4, eac5, eac6],
   msafiri: [msafiri1, msafiri2, msafiri3],
   farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
 };
