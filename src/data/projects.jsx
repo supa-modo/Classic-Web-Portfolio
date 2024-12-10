@@ -182,7 +182,7 @@ export const projects = [
     ],
     images: projectImages.eac,
     githubLink: "https://github.com/supa-modo/internship-web-portal",
-    liveLink: "https://green-ocean-080f7b703.5.azurestaticapps.net/",
+    liveLink: "eac-internship-applications-portal.vercel.app",
   },
   {
     name: "Flutter Farm Adverts App",

@@ -87,7 +87,7 @@ const Projects = () => {
           </h2>
           <p className="pb-1">
             Click on View All Projects button below this section to view and
-            browse more about all my projects done.
+            browse more about all the projects I've completed.
           </p>
         </div>
 
