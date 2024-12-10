@@ -73,7 +73,7 @@ const Projects = () => {
     <section id="projects" className="min-h-screen pt-6 pb-8 font-poppins">
       <div className="md:px-20 px-3 mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
             Projects Completed
             <motion.div
               initial={{ width: 0 }}
@@ -85,7 +85,7 @@ const Projects = () => {
               className="absolute mx-auto bottom-[-12px] left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
             />
           </h2>
-          <p className="pb-1">
+          <p className="pb-1 text-sm md:text-base">
             Click on View All Projects button below this section to view and
             browse more about all the projects I've completed.
           </p>
@@ -114,14 +114,14 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-4 flex flex-col border-t">
-                <h3 className=" font-semibold text-text mb-2">
+                <h3 className=" font-semibold text-secondary-two  mb-2">
                   {project.name}
                 </h3>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-primary/10 text-primary rounded-lg text-xs"
+                      className="px-2 py-1 bg-primary/10 text-gray-500 rounded-lg text-[11px] font-semibold "
                     >
                       {tech}
                     </span>
@@ -167,10 +167,10 @@ const Projects = () => {
             onClick={() => {
               navigate("/projects");
             }}
-            className="group px-9 py-[11px] font-semibold border border-gray-300 text-white rounded-xl shadow-lg transition-transform transform hover:scale-105 bg-gradient-to-br from-secondary to-primary/30"
+            className="group pl-7 pr-5 md:px-9 py-[11px] font-semibold border border-gray-300 text-white rounded-xl shadow-lg transition-transform transform hover:scale-105 bg-gradient-to-br from-secondary to-primary/30"
           >
-            <div className="flex space-x-3">
-              <span className="">View All My Projects</span>
+            <div className="flex space-x-2 md:space-x-3">
+              <span className="md:text-base text-sm">View All My Projects</span>
               <ChevronRight className="group-hover:translate-x-2 transition-transform" />
             </div>
           </button>

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { projects } from "../data/projects";
 import { FaGithub } from "react-icons/fa";
+import { LuComponent } from "react-icons/lu";
 
 const ProjectsPage = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -77,7 +78,7 @@ const ProjectsPage = () => {
         <div className="md:hidden mb-4">
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50"
+            className="flex text-[13px] font-semibold text-gray-600 items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50"
           >
             <Menu className="w-5 h-5" />
             <span>{projects[currentProject].name}</span>
@@ -87,7 +88,7 @@ const ProjectsPage = () => {
         <div className="grid md:grid-cols-4 gap-6 min-h-[calc(100vh-250px)]">
           {/* Project Navigation - Desktop */}
           <div className="hidden md:block col-span-1 bg-white border border-gray-200 rounded-xl shadow-lg p-6 sticky top-24 h-[calc(100vh-250px)] overflow-y-auto">
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">
+            <h3 className="text-lg font-bold text-secondary-two mb-4">
               All Projects List
             </h3>
             <nav className="space-y-2">
@@ -96,12 +97,14 @@ const ProjectsPage = () => {
                   key={index}
                   href="#"
                   onClick={() => handleProjectChange(index)}
-                  className={`block p-2 text-base rounded-lg hover:bg-gray-100 transition-colors ${
+                  className={`p-2 text-[12px] md:text-[15px] rounded-lg hover:bg-gray-100 transition-colors flex items-center ${
                     index === currentProject
                       ? "bg-primary/20 text-secondary font-semibold"
                       : "text-gray-500"
                   }`}
                 >
+                  <LuComponent className="mr-2 h-3 w-3 text-secondary" />{" "}
+                  {/* Add the icon */}
                   {project.name}
                 </motion.a>
               ))}
@@ -178,10 +181,10 @@ const ProjectsPage = () => {
             </div>
 
             <div className="p-6 flex-1">
-              <h2 className="text-xl font-bold text-secondary-two/70 mb-4">
+              <h2 className="text-lg md:text-xl font-bold text-secondary-two/70 mb-4">
                 {projects[currentProject].name}
               </h2>
-              <p className="text-gray-500 line-clamp-3 mb-6">
+              <p className="text-gray-500 text-sm md:text-base line-clamp-3 mb-6">
                 {projects[currentProject].description}
               </p>
 
@@ -203,8 +206,8 @@ const ProjectsPage = () => {
                   rel="noopener noreferrer"
                   className="text-text flex space-x-2 items-end font-semibold px-3 hover:text-blue-500 transition-colors"
                 >
-                  <FaGithub size={24} />
-                  <span className="text-sm">View on GitHub</span>
+                  <FaGithub size={23} />
+                  <span className="text-xs">View on GitHub</span>
                 </a>
                 <a
                   href={projects[currentProject].liveLink}
@@ -217,7 +220,7 @@ const ProjectsPage = () => {
                   }}
                   className="group flex items-center text-sm mx-2 font-semibold hover:text-white hover:bg-gray-600 gap-2 px-5 py-2  text-secondary-two rounded-md transition-transform transform hover:scale-105"
                 >
-                  Live Demo{" "}
+                  <span className="text-xs">Live Demo</span>
                   <ExternalLink
                     color="#048"
                     size={16}
@@ -249,14 +252,14 @@ const ProjectsPage = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-gray-700">
-                  Projects
+                <h3 className="text-lg font-semibold text-secondary-two">
+                  All Projects List
                 </h3>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 hover:bg-gray-100 rounded-lg"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5 text-red-500" />
                 </button>
               </div>
               <nav className="space-y-2">
@@ -265,12 +268,14 @@ const ProjectsPage = () => {
                     key={index}
                     href="#"
                     onClick={() => handleProjectChange(index)}
-                    className={`block px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors ${
+                    className={`p-2 text-[13px] rounded-lg hover:bg-gray-100 transition-colors flex items-center ${
                       index === currentProject
-                        ? "bg-primary/10 text-primary font-semibold"
+                        ? "bg-primary/20 text-primary font-semibold"
                         : "text-gray-500"
                     }`}
                   >
+                    <LuComponent className="mr-2 h-3 w-3 text-secondary" />{" "}
+                    {/* Add the icon */}
                     {project.name}
                   </motion.a>
                 ))}

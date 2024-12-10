@@ -111,7 +111,11 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="text-gray-600 focus:outline-none"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? (
+                <X size={24} className="text-red-500" />
+              ) : (
+                <Menu size={24} />
+              )}
             </motion.button>
           </div>
         </div>
@@ -136,7 +140,7 @@ const Navbar = () => {
                     transition={{ delay: index * 0.1 }}
                     className="w-full text-left px-4 py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-all flex items-center justify-between group"
                   >
-                    <span className="font-medium">{item.name}</span>
+                    <span className="font-medium text-sm">{item.name}</span>
                     <motion.div
                       initial={{ x: -4, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
@@ -153,13 +157,10 @@ const Navbar = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: navItems.length * 0.1 }}
-                  className="w-full mt-2 px-4 py-2.5 bg-gradient-to-br from-primary to-secondary text-white rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
+                  className="w-full mt-2 px-4 py-2.5 bg-gradient-to-br from-secondary to-primary/30 text-white rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
                 >
-                  <TbMessage 
-                    size={18} 
-                    className="group-hover:animate-bounce"
-                  />
-                  <span className="font-medium">Contact Me</span>
+                  <TbMessage size={18} className="group-hover:animate-bounce" />
+                  <span className="font-medium text-sm">Contact Me</span>
                 </motion.button>
               </div>
             </motion.div>

@@ -17,17 +17,17 @@ const HeroAbout = () => {
   const stats = [
     {
       icon: <Briefcase size={30} className="text-primary" />,
-      value: "3+",
+      value: "2+",
       label: "Years of Experience",
     },
     {
       icon: <Code size={30} className="text-primary" />,
-      value: "20+",
-      label: "Completed Projects",
+      value: "15+",
+      label: "Completed Stylish Projects",
     },
     {
       icon: <Award size={30} className="text-primary" />,
-      value: "5+",
+      value: "3+",
       label: "Tech Certifications",
     },
   ];
@@ -70,12 +70,12 @@ const HeroAbout = () => {
               <h1 className="text-4xl font-bold text-gray-700 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
                 Eddy Ochieng Odhiambo
               </h1>
-              <h2 className="text-2xl font-semibold text-gray-500 mt-2">
+              <h2 className="text-xl md:text-2xl font-semibold text-gray-500 mt-2">
                 A FullStack Software Developer & Creative Designer
               </h2>
             </div>
 
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
               I am a passionate developer crafting innovative and competent
               digital solutions with a blend of creativity and technical
               expertise. Transforming ideas into elegant, efficient professional
@@ -95,7 +95,7 @@ const HeroAbout = () => {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-semibold"
+                  className="px-3 py-1 bg-primary/10 text-primary rounded-lg text-[11px] md:text-xs font-semibold"
                 >
                   {skill}
                 </span>
@@ -112,7 +112,7 @@ const HeroAbout = () => {
               >
                 <div className="flex items-center space-x-2">
                   <Download size={18} />
-                  <span>Download my CV / Resume</span>
+                  <span className="text-sm ">Download my CV / Resume</span>
                 </div>
               </motion.button>
 

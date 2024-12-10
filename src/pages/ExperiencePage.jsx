@@ -33,7 +33,7 @@ const Experience = () => {
   return (
     <Box sx={{ minHeight: "100vh", pt: 16 }}>
       <Container className="font-poppins">
-        <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
           Professional Work Experience
           <motion.div
             initial={{ width: 0 }}
@@ -45,7 +45,30 @@ const Experience = () => {
             className="absolute mx-auto bottom-[-12px] left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
           />
         </h2>
-        <Timeline position="alternate">
+        <Timeline
+          position="alternate"
+          sx={{
+            // Default to vertical on small screens
+            [`@media (max-width:900px)`]: {
+              "& .MuiTimelineItem-root": {
+                flexDirection: "column",
+                alignItems: "flex-start",
+                "&:before": {
+                  display: "none",
+                },
+              },
+              "& .MuiTimelineSeparator-root": {
+                position: "relative",
+                marginBottom: 2,
+              },
+              "& .MuiTimelineContent-root": {
+                width: "100%",
+                paddingLeft: "0 !important",
+                paddingRight: "0 !important",
+              },
+            },
+          }}
+        >
           {experiences.map((exp, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
@@ -65,18 +88,22 @@ const Experience = () => {
                       bgcolor: "background.paper",
                       borderRadius: 4,
                       boxShadow: 1,
+                      [`@media (max-width:900px)`]: {
+                        textAlign: "left",
+                        paddingBottom: 2,
+                      },
                     }}
                   >
-                    <h2 className="font-semibold font-poppins text-gray-600">
+                    <h2 className="font-semibold text-[15px] md:text-base font-poppins text-gray-600 text-start">
                       {exp.title}
                     </h2>
-                    <h3 className="text-gray-400 font-semibold font-poppins text-sm">
+                    <h3 className="text-gray-400 font-semibold font-poppins text-[13px] md:text-[15px] text-start">
                       {exp.company}
                     </h3>
-                    <p className="text-xs text-secondary font-semibold py-1 font-poppins">
+                    <p className="text-xs md:text-[13px] text-secondary font-semibold pt-1 pb-2 md:pb-3 font-poppins text-start">
                       {exp.period}
                     </p>
-                    <p className="text-[15px] text-gray-500 font-poppins">
+                    <p className="text-sm md:text-[15px] text-gray-500 font-poppins text-start">
                       {exp.description}
                     </p>
                     <Box sx={{ mt: 2 }}>
@@ -94,7 +121,7 @@ const Experience = () => {
                             display: "inline-block",
                             mb: 1,
                             fontFamily: "Poppins",
-                            fontSize: "0.8rem",
+                            fontSize: "0.75rem",
                           }}
                         >
                           {skill}

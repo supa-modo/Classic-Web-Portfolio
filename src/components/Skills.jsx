@@ -94,7 +94,7 @@ const Skills = () => {
     <section id="skills" className="py-16 md:py-20 font-poppins">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 relative inline-block pb-1 md:mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
             Skills and Expertise
             <motion.div
               initial={{ width: 0 }}
