@@ -148,7 +148,7 @@ const Projects = () => {
                     }}
                     className="group flex items-center text-sm mx-2 font-semibold hover:text-white hover:bg-gray-600 gap-2 px-5 py-2  text-secondary-two rounded-md transition-transform transform hover:scale-105"
                   >
-                    Live Demo{" "}
+                    <span className="text-xs md:text-sm">Live Demo</span>
                     <ExternalLink
                       color="#048"
                       size={16}

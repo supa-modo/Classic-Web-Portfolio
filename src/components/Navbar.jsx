@@ -98,7 +98,7 @@ const Navbar = () => {
               className="px-6 py-2 bg-gradient-to-br from-secondary to-primary/30 text-white rounded-lg shadow-md hover:shadow-lg group"
             >
               <div className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform">
-                <TbMessage size={20} className="" />
+                <TbMessage size={20} className="hover:animate-bounce" />
                 <span className="text-sm"> Contact Me</span>
               </div>
             </motion.button>
