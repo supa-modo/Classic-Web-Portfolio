@@ -48,7 +48,7 @@ const Experience = () => {
         <Timeline
           position="alternate"
           sx={{
-            // Default to vertical on small screens
+            // Default to vertical stacking on small screens
             [`@media (max-width:900px)`]: {
               "& .MuiTimelineItem-root": {
                 flexDirection: "column",
@@ -91,6 +91,8 @@ const Experience = () => {
                       [`@media (max-width:900px)`]: {
                         textAlign: "left",
                         paddingBottom: 2,
+                        paddingLeft: 3,
+                        paddingRight: 2,
                       },
                     }}
                   >
