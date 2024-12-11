@@ -166,7 +166,7 @@ export const projects = [
     tags: ["React", "Express", "PostgreSQL", "Chart.js"],
     images: projectImages.meetings,
     githubLink: "https://github.com/supa-modo/meetings-app",
-    liveLink: "https://meeting-tracker-demo.com",
+    liveLink: "https://ashy-moss-0764c4a10.4.azurestaticapps.net/",
   },
   {
     name: "IT Assets Management App",
@@ -193,7 +193,7 @@ export const projects = [
     ],
     images: projectImages.eac,
     githubLink: "https://github.com/supa-modo/internship-web-portal",
-    liveLink: "eac-internship-applications-portal.vercel.app",
+    liveLink: "https://eac-internship-applications-portal.vercel.app",
   },
   {
     name: "Rental Property Management",
@@ -202,7 +202,7 @@ export const projects = [
     tags: ["React", "Node.js", "PostgreSql", "Sequelize", "ChartJs"],
     images: projectImages.rent,
     githubLink: "https://github.com/supa-modo/Rental-Property-Listings-Portal",
-    liveLink: "https://brave-rock-0afd13110.4.azurestaticapps.net/profile",
+    liveLink: "https://brave-rock-0afd13110.4.azurestaticapps.net/",
   },
   {
     name: "Flutter Farm Adverts App",

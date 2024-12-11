@@ -37,7 +37,7 @@ const Projects = () => {
 
       technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
       githubLink: "https://github.com/supa-modo/meetings-app",
-      liveLink: "https://meeting-tracker-demo.com",
+      liveLink: "https://ashy-moss-0764c4a10.4.azurestaticapps.net/",
       image: meetings1,
     },
     {
@@ -64,7 +64,7 @@ const Projects = () => {
         "Chart.js",
       ],
       githubLink: "https://github.com/supa-modo/internship-web-portal",
-      liveLink: "https://green-ocean-080f7b703.5.azurestaticapps.net/",
+      liveLink: "https://eac-internship-applications-portal.vercel.app/",
       image: eac1,
     },
   ];
