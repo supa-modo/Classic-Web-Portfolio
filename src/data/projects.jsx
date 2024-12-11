@@ -66,6 +66,16 @@ import meetings8 from "../assets/images/meetingAttendance/meetings8.png";
 import meetings9 from "../assets/images/meetingAttendance/meetings9.png";
 import meetings10 from "../assets/images/meetingAttendance/meetings10.png";
 import meetings11 from "../assets/images/meetingAttendance/meetings11.png";
+// Import images for Meeting Attendance project
+import rent1 from "../assets/images/rent/rent01.png";
+import rent2 from "../assets/images/rent/rent1.png";
+import rent3 from "../assets/images/rent/rent2.png";
+import rent4 from "../assets/images/rent/rent3.png";
+import rent5 from "../assets/images/rent/rent4.png";
+import rent6 from "../assets/images/rent/rent5.png";
+import rent7 from "../assets/images/rent/rent7.png";
+import rent8 from "../assets/images/rent/rent8.png";
+import rent9 from "../assets/images/rent/rent9.png";
 
 // Project data structure
 const projectImages = {
@@ -119,6 +129,7 @@ const projectImages = {
   eac: [eac1, eac2, eac3, eac4, eac5, eac6],
   msafiri: [msafiri1, msafiri2, msafiri3],
   farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
+  rent: [rent1, rent2, rent3, rent4, rent5, rent6, rent7, rent8, rent9],
 };
 
 export const projects = [
@@ -185,10 +196,19 @@ export const projects = [
     liveLink: "eac-internship-applications-portal.vercel.app",
   },
   {
+    name: "Rental Property Management",
+    description:
+      "Currently an ongoing frontend development of a rental property listing and management that serves to easen the processes of keeping records of rental income, tenant management, maintenance and notifying tenants of upcoming payments.",
+    tags: ["React", "Node.js", "PostgreSql", "Sequelize", "ChartJs"],
+    images: projectImages.rent,
+    githubLink: "https://github.com/supa-modo/Rental-Property-Listings-Portal",
+    liveLink: "https://brave-rock-0afd13110.4.azurestaticapps.net/profile",
+  },
+  {
     name: "Flutter Farm Adverts App",
     description:
       "My very first flutter application designed to help farmers advertise their crops and livestock products for sale to potential buyers. Connected it to the government's agriculture website that regulates standard prices of agricultural produce so farmers and buyers could check on the regulated prices from the app and adjust their prices.",
-    tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
+    tags: ["Flutter", "Node.js", "Express", "Firebase ", "FireStore"],
     images: projectImages.farm,
     githubLink: "https://github.com/supa-modo/FlutterAppProject-4.0",
     liveLink: "https://pos-system-demo.com",
@@ -206,7 +226,7 @@ export const projects = [
     name: "Msafiri Public Transport App",
     description:
       "A full-stack flutter application for managing and accesing payments in matatus in Kenya with integrated Mpesa payments and google maps to track and set your destinations. Matatu operators get notifications on alighting passengers on reaching destinations. Dashboard with stats and reports payments and amount made by operators.",
-    tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
+    tags: ["Flutter", "Node.js", "Express", "Firebase", "FireStore"],
     images: projectImages.msafiri,
     githubLink: "https://github.com/supa-modo/Msafiri-Flutter-App-Project",
     liveLink: "https://msafiri-demo.com",
