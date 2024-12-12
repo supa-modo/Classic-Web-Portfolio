@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/HomePage";
 import Projects from "./pages/ProjectsPage";
 import Experience from "./pages/ExperiencePage";
 import Skills from "./pages/SkillsPage";
 import Footer from "./components/Footer";
-import ProjectsPage from "./pages/ProjectsPage";
 
 const theme = createTheme({
   palette: {
@@ -44,8 +44,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Analytics /> {/* Add this line */}
       <Router>
-        {/* <Header /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
