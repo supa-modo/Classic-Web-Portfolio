@@ -67,6 +67,18 @@ import meetings9 from "../assets/images/meetingAttendance/meetings9.png";
 import meetings10 from "../assets/images/meetingAttendance/meetings10.png";
 import meetings11 from "../assets/images/meetingAttendance/meetings11.png";
 // Import images for Meeting Attendance project
+import kms1 from "../assets/images/kms/kms1.png";
+import kms2 from "../assets/images/kms/kms2.png";
+import kms3 from "../assets/images/kms/kms3.png";
+import kms4 from "../assets/images/kms/kms4.png";
+import kms5 from "../assets/images/kms/kms5.png";
+import kms6 from "../assets/images/kms/kms6.png";
+import kms7 from "../assets/images/kms/kms7.png";
+import kms8 from "../assets/images/kms/kms8.png";
+import kms9 from "../assets/images/kms/kms9.png";
+import kms10 from "../assets/images/kms/kms10.png";
+import kms11 from "../assets/images/kms/kms11.png";
+// Import images for Meeting Attendance project
 import rent1 from "../assets/images/rent/rent01.png";
 import rent2 from "../assets/images/rent/rent1.png";
 import rent3 from "../assets/images/rent/rent2.png";
@@ -126,6 +138,7 @@ const projectImages = {
     meetings10,
     meetings11,
   ],
+  kms: [kms1, kms2, kms3, kms4, kms5, kms6, kms7, kms8, kms9, kms10, kms11],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6],
   msafiri: [msafiri1, msafiri2, msafiri3],
   farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
@@ -149,6 +162,15 @@ export const projects = [
     images: projectImages.esoko,
     githubLink: "https://github.com/private-repo/esoko",
     liveLink: "https://icy-smoke-09e427410.4.azurestaticapps.net/",
+  },
+  {
+    name: "AfCHPR Doc System",
+    description:
+      "This is a full stack react and node system that handles sharing and managing of documents across departments and units based on a heirarchical access control with options of storing several translated versions of the document's original language in other languages.",
+    tags: ["React", "Node.js", "MongoDB", "Socket.IO"],
+    images: projectImages.kms,
+    githubLink: "https://github.com/supa-modo/African-Court-KMS",
+    liveLink: "https://african-court-kms.vercel.app/",
   },
   {
     name: "Ilala City College Website",
