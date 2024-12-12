@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import esoko1 from "../assets/images/esoko/esoko1.png";
-import esoko2 from "../assets/images/esoko/esoko2.png";
+import kms1 from "../assets/images/kms/kms1.png";
 import ilala1 from "../assets/images/ilalaCollege/ilala1.png";
 import meetings1 from "../assets/images/meetingAttendance/meetings1.png";
 import eac1 from "../assets/images/eac/eac1.png";
@@ -41,15 +41,14 @@ const Projects = () => {
       image: meetings1,
     },
     {
-      name: "IT Assets Management App",
+      name: "AfCHPR KMS",
       description:
-        "An admin dashboard for managing and tracking location of departmental assets, inventory, and stock. Has functionalities to notify admin on restcockable items with low inventory and also has a borrowing and return setup for lending of IT equipment for temporary usage. Notifies of overdue unreturned inventory witha clean dashboard ",
+        "This is a full stack react and node system that handles sharing and managing of documents across departments and units based on a heirarchical access control with options of storing several translated versions of the document's original language in other languages.",
 
-      technologies: ["Flutter", "Firebase", "GetX"],
-      githubLink:
-        "https://github.com/supa-modo/IT-Assets-Inventory-and-Borrowing",
-      liveLink: "https://ecommerce-dashboard-demo.com",
-      image: esoko2,
+      technologies: ["React", "Node", "Express", "PostgreSQL"],
+      githubLink: "https://github.com/supa-modo/African-Court-KMS",
+      liveLink: "https://african-court-kms.vercel.app/",
+      image: kms1,
     },
     {
       name: "Internships Web Portal Mngmt",
