@@ -3,7 +3,7 @@ import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/HomePage";
-import Projects from "./pages/ProjectsPage";
+import ProjectsPage from "./pages/ProjectsPage";
 import Experience from "./pages/ExperiencePage";
 import Skills from "./pages/SkillsPage";
 import Footer from "./components/Footer";
@@ -44,7 +44,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Analytics /> {/* Add this line */}
+      <Analytics />
       <Router>
         <Navbar />
         <Routes>
