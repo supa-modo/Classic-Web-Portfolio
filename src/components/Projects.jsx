@@ -3,42 +3,43 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import esoko1 from "../assets/images/esoko/esoko1.png";
+import esoko3 from "../assets/images/esoko/esoko3.png";
 import kms1 from "../assets/images/kms/kms1.png";
-import ilala1 from "../assets/images/ilalaCollege/ilala1.png";
-import meetings1 from "../assets/images/meetingAttendance/meetings1.png";
+import welfare1 from "../assets/images/welfare/welfare1.png";
+import hslive1 from "../assets/images/hslive/hslive01.png";
 import eac1 from "../assets/images/eac/eac1.png";
 
 const Projects = () => {
   const navigate = useNavigate();
   const projects = [
     {
-      name: "Ilala City College Website",
+      name: "Staff Welfare Loans & Savings",
       description:
-        "A static frontend-only website as a landing page for a City Institue of Health and Allied Sciences to showcase their school and programmes offered with information on the application process and requirements, external links to the application portal and downloadable application documents and guides.",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      githubLink: "https://github.com/supa-modo/Ilala-College-Website",
-      liveLink: "https://polite-pond-007a7b010.4.azurestaticapps.net/",
-      image: ilala1,
+        "A demonstration of a full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records and interest accrued for staff members part of a welfare program in an organization.",
+      technologies: ["React", "Node.js", "PostgreSql", "WebSockets"],
+      githubLink:
+        "https://github.com/supa-modo/Sacco-Welfare-Loans-and-Savings",
+      liveLink: "https://orange-stone-09645d41e.4.azurestaticapps.net/",
+      image: welfare1,
     },
     {
       name: "eSoko E-commerce Fashion Store",
       description:
         "A full-stack e-commerce platform that connects buyers to eSoko's fashion collection of men's, women's and children's clothes and accessories.",
-      technologies: ["Flutter", "Firebase", "GetX"],
+      technologies: ["React", "Vite", "Redux", "Node.Js", "Express"],
       githubLink: "https://github.com/private-repo/esoko",
       liveLink: "https://icy-smoke-09e427410.4.azurestaticapps.net/",
-      image: esoko1,
+      image: esoko3,
     },
     {
-      name: "Meeting Attendance Application",
+      name: "Private Jet Charter Site",
       description:
-        "An admin dashboard for managing meeting attendance and analytics, taking records of participant attendance with digital signing and attendance report generation. Also includes a participant directory with contact information and records of all meetings attended by each recorded participant",
+        "A static webapp for a private jet charter company to showcase their services and receive enquiries and communications with potential clients. Site showcases their jet fleet along with priccing and amenities among more other features.",
 
-      technologies: ["React", "Express", "PostgreSQL", "Chart.js"],
-      githubLink: "https://github.com/supa-modo/meetings-app",
-      liveLink: "https://ashy-moss-0764c4a10.4.azurestaticapps.net/",
-      image: meetings1,
+      technologies: ["React", "TailwindCss", "Shadcn"],
+      githubLink: "https://github.com/supa-modo/HsLive-Bookings",
+      liveLink: "https://orange-dune-09ea83f10.4.azurestaticapps.net/",
+      image: hslive1,
     },
     {
       name: "AfCHPR KMS",

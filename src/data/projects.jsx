@@ -89,6 +89,58 @@ import rent7 from "../assets/images/rent/rent7.png";
 import rent8 from "../assets/images/rent/rent8.png";
 import rent9 from "../assets/images/rent/rent9.png";
 
+// Import images for HSLive project
+import hslive1 from "../assets/images/hslive/hslive1.png";
+import hslive2 from "../assets/images/hslive/hslive2.png";
+import hslive3 from "../assets/images/hslive/hslive3.png";
+import hslive4 from "../assets/images/hslive/hslive4.png";
+import hslive5 from "../assets/images/hslive/hslive5.png";
+import hslive6 from "../assets/images/hslive/hslive6.png";
+import hslive7 from "../assets/images/hslive/hslive7.png";
+import hslive8 from "../assets/images/hslive/hslive8.png";
+import hslive9 from "../assets/images/hslive/hslive9.png";
+import hslive10 from "../assets/images/hslive/hslive10.png";
+import hslive11 from "../assets/images/hslive/hslive11.png";
+import hslive12 from "../assets/images/hslive/hslive12.png";
+import hslive13 from "../assets/images/hslive/hslive13.png";
+import hslive14 from "../assets/images/hslive/hslive14.png";
+import hslive15 from "../assets/images/hslive/hslive15.png";
+import hslive16 from "../assets/images/hslive/hslive16.png";
+import hslive17 from "../assets/images/hslive/hslive17.png";
+import hslive18 from "../assets/images/hslive/hslive18.png";
+import hslive19 from "../assets/images/hslive/hslive19.png";
+import hslive20 from "../assets/images/hslive/hslive20.png";
+import hslive21 from "../assets/images/hslive/hslive21.png";
+import hslive22 from "../assets/images/hslive/hslive22.png";
+import hslive23 from "../assets/images/hslive/hslive23.png";
+import hslive24 from "../assets/images/hslive/hslive24.png";
+import hslive25 from "../assets/images/hslive/hslive25.png";
+import hslive26 from "../assets/images/hslive/hslive26.png";
+import hslive27 from "../assets/images/hslive/hslive27.png";
+
+// Import images for Welfare project
+import welfare1 from "../assets/images/welfare/welfare1.png";
+import welfare2 from "../assets/images/welfare/welfare2.png";
+import welfare3 from "../assets/images/welfare/welfare3.png";
+import welfare4 from "../assets/images/welfare/welfare4.png";
+import welfare5 from "../assets/images/welfare/welfare5.png";
+import welfare6 from "../assets/images/welfare/welfare6.png";
+import welfare7 from "../assets/images/welfare/welfare7.png";
+import welfare8 from "../assets/images/welfare/welfare8.png";
+import welfare9 from "../assets/images/welfare/welfare9.png";
+import welfare10 from "../assets/images/welfare/welfare10.png";
+import welfare11 from "../assets/images/welfare/welfare11.png";
+import welfare12 from "../assets/images/welfare/welfare12.png";
+import welfare13 from "../assets/images/welfare/welfare13.png";
+import welfare14 from "../assets/images/welfare/welfare14.png";
+import welfare15 from "../assets/images/welfare/welfare15.png";
+import welfare16 from "../assets/images/welfare/welfare16.png";
+import welfare17 from "../assets/images/welfare/welfare17.png";
+import welfare18 from "../assets/images/welfare/welfare18.png";
+import welfare19 from "../assets/images/welfare/welfare19.png";
+import welfare20 from "../assets/images/welfare/welfare20.png";
+import welfare21 from "../assets/images/welfare/welfare21.png";
+
 // Project data structure
 const projectImages = {
   esoko: [
@@ -143,9 +195,79 @@ const projectImages = {
   msafiri: [msafiri1, msafiri2, msafiri3],
   farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
   rent: [rent1, rent2, rent3, rent4, rent5, rent6, rent7, rent8, rent9],
+  hslive: [
+    hslive1,
+    hslive2,
+    hslive3,
+    hslive4,
+    hslive5,
+    hslive6,
+    hslive7,
+    hslive8,
+    hslive9,
+    hslive10,
+    hslive11,
+    hslive12,
+    hslive13,
+    hslive14,
+    hslive15,
+    hslive16,
+    hslive17,
+    hslive18,
+    hslive19,
+    hslive20,
+    hslive21,
+    hslive22,
+    hslive23,
+    hslive24,
+    hslive25,
+    hslive26,
+    hslive27,
+  ],
+  welfare: [
+    welfare1,
+    welfare2,
+    welfare3,
+    welfare4,
+    welfare5,
+    welfare6,
+    welfare7,
+    welfare8,
+    welfare9,
+    welfare10,
+    welfare11,
+    welfare12,
+    welfare13,
+    welfare14,
+    welfare15,
+    welfare16,
+    welfare17,
+    welfare18,
+    welfare19,
+    welfare20,
+    welfare21,
+  ],
 };
 
 export const projects = [
+  {
+    name: "Private Jet Charter Site",
+    description:
+      "A static webapp for a private jet charter company to showcase their services and receive enquiries and communications with potential clients. Site showcases their jet fleet along with priccing and amenities among more other features.",
+    tags: ["React", "TailwindCss", "Shadcn"],
+    images: projectImages.hslive,
+    githubLink: "https://github.com/supa-modo/HsLive-Bookings",
+    liveLink: "https://orange-dune-09ea83f10.4.azurestaticapps.net/",
+  },
+  {
+    name: "Staff Welfare Loans & Savings",
+    description:
+      "A demonstration of a full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records and interest accrued for staff members part of a welfare program in an organization.",
+    tags: ["React", "Node.js", "PostgreSql", "WebSockets"],
+    images: projectImages.welfare,
+    githubLink: "https://github.com/supa-modo/Sacco-Welfare-Loans-and-Savings",
+    liveLink: "https://orange-stone-09645d41e.4.azurestaticapps.net/",
+  },
   {
     name: "eSoko E-commerce Fashion Store",
     description:
@@ -234,15 +356,6 @@ export const projects = [
     images: projectImages.farm,
     githubLink: "https://github.com/supa-modo/FlutterAppProject-4.0",
     liveLink: "https://pos-system-demo.com",
-  },
-  {
-    name: "Sacco Welfare Loans & Savings App",
-    description:
-      "A full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records.",
-    tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
-    images: [],
-    githubLink: "https://github.com/supa-modo/sacco-welfare",
-    liveLink: "https://sacco-welfare-demo.com",
   },
   {
     name: "Msafiri Public Transport App",
