@@ -37,6 +37,17 @@ import esoko12 from "../assets/images/esoko/esoko12.png";
 import esoko13 from "../assets/images/esoko/esoko13.png";
 import esoko21 from "../assets/images/esoko/esoko21.png";
 
+// Import images for Elite Fitness project
+import elite1 from "../assets/images/elite-fitness/elite1.png";
+import elite2 from "../assets/images/elite-fitness/elite2.png";
+import elite3 from "../assets/images/elite-fitness/elite3.png";
+import elite4 from "../assets/images/elite-fitness/elite4.png";
+import elite5 from "../assets/images/elite-fitness/elite5.png";
+import elite6 from "../assets/images/elite-fitness/elite6.png";
+import elite7 from "../assets/images/elite-fitness/elite7.png";
+import elite8 from "../assets/images/elite-fitness/elite8.png";
+import elite9 from "../assets/images/elite-fitness/elite9.png";
+
 // Import images for Ilala College project
 import ilala1 from "../assets/images/ilalaCollege/ilala1.png";
 import ilala2 from "../assets/images/ilalaCollege/ilala2.png";
@@ -192,6 +203,17 @@ const projectImages = {
   ],
   kms: [kms1, kms2, kms3, kms4, kms5, kms6, kms7, kms8, kms9, kms10, kms11],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6],
+  elite: [
+    elite1,
+    elite2,
+    elite3,
+    elite4,
+    elite5,
+    elite6,
+    elite7,
+    elite8,
+    elite9,
+  ],
   msafiri: [msafiri1, msafiri2, msafiri3],
   farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
   rent: [rent1, rent2, rent3, rent4, rent5, rent6, rent7, rent8, rent9],
@@ -254,19 +276,28 @@ export const projects = [
     name: "Private Jet Charter Site",
     description:
       "A static webapp for a private jet charter company to showcase their services and receive enquiries and communications with potential clients. Site showcases their jet fleet along with priccing and amenities among more other features.",
-    tags: ["React", "TailwindCss", "Shadcn"],
+    tags: ["React", "TailwindCss", "Framer Motion"],
     images: projectImages.hslive,
     githubLink: "https://github.com/supa-modo/HsLive-Bookings",
-    liveLink: "https://orange-dune-09ea83f10.4.azurestaticapps.net/",
+    liveLink: "https://www.shineluxuryprivatejets.com/",
+  },
+  {
+    name: "Gym Website",
+    description:
+      "A static website for a gym to showcase their services and receive enquiries and communications with potential clients. Site showcases their gym facilities and priccing and amenities among more other features.",
+    tags: ["React", "TailwindCss", "Framer Motion", "Shadcn"],
+    images: projectImages.elite,
+    githubLink: "https://github.com/supa-modo/gym-website",
+    liveLink: "https://elite-fitness-zeta.vercel.app/",
   },
   {
     name: "Staff Welfare Loans & Savings",
     description:
       "A demonstration of a full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records and interest accrued for staff members part of a welfare program in an organization.",
-    tags: ["React", "Node.js", "PostgreSql", "WebSockets"],
+    tags: ["React", "TailwindCss", "Node.js", "PostgreSql", "WebSockets"],
     images: projectImages.welfare,
     githubLink: "https://github.com/supa-modo/Sacco-Welfare-Loans-and-Savings",
-    liveLink: "https://orange-stone-09645d41e.4.azurestaticapps.net/",
+    liveLink: "https://sacco-welfare-loans-and-savings.vercel.app/",
   },
   {
     name: "eSoko E-commerce Fashion Store",
@@ -283,7 +314,7 @@ export const projects = [
     ],
     images: projectImages.esoko,
     githubLink: "https://github.com/private-repo/esoko",
-    liveLink: "https://icy-smoke-09e427410.4.azurestaticapps.net/",
+    liveLink: "https://e-soko-ecommerce.vercel.app/",
   },
   {
     name: "AfCHPR Doc System",
@@ -301,7 +332,7 @@ export const projects = [
     tags: ["React", "Node.js", "MongoDB", "Socket.IO"],
     images: projectImages.ilala,
     githubLink: "https://github.com/supa-modo/Ilala-College-Website",
-    liveLink: "https://polite-pond-007a7b010.4.azurestaticapps.net/",
+    liveLink: "https://cityinstitute-ilala.vercel.app/",
   },
   {
     name: "Meeting Attendance Application",
@@ -320,7 +351,7 @@ export const projects = [
     images: [],
     githubLink:
       "https://github.com/supa-modo/IT-Assets-Inventory-and-Borrowing",
-    liveLink: "https://ecommerce-dashboard-demo.com",
+    liveLink: "https://it-assets-inventory-and-borrowing.vercel.app/",
   },
   {
     name: "Internships Web Portal Mngmt",
@@ -364,7 +395,7 @@ export const projects = [
     tags: ["Flutter", "Node.js", "Express", "Firebase", "FireStore"],
     images: projectImages.msafiri,
     githubLink: "https://github.com/supa-modo/Msafiri-Flutter-App-Project",
-    liveLink: "https://msafiri-demo.com",
+    liveLink: "https://eddyodhiambo.vercel.app",
   },
   {
     name: "Tours & Safaris Website",
@@ -373,7 +404,7 @@ export const projects = [
     tags: ["Next.js", "Node.js", "PostgreSql", "Prisma"],
     images: [],
     githubLink: "https://github.com/supa-modo/tours-travel",
-    liveLink: "https://tours11-demo.com",
+    liveLink: "https://tours-travel-website.vercel.app/",
   },
   {
     name: "POS System with C#",

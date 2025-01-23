@@ -7,7 +7,7 @@ import esoko3 from "../assets/images/esoko/esoko3.png";
 import kms1 from "../assets/images/kms/kms1.png";
 import welfare1 from "../assets/images/welfare/welfare1.png";
 import hslive1 from "../assets/images/hslive/hslive01.png";
-import eac1 from "../assets/images/eac/eac1.png";
+import elite1 from "../assets/images/elite-fitness/elite1.png";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ const Projects = () => {
 
       technologies: ["React", "TailwindCss", "Shadcn"],
       githubLink: "https://github.com/supa-modo/HsLive-Bookings",
-      liveLink: "https://orange-dune-09ea83f10.4.azurestaticapps.net/",
+      liveLink: "https://www.shineluxuryprivatejets.com/",
       image: hslive1,
     },
     {
@@ -52,20 +52,13 @@ const Projects = () => {
       image: kms1,
     },
     {
-      name: "Internships Web Portal Mngmt",
+      name: "Gym Website",
       description:
-        "A portal for accepting internship applications from applicants with an admin side for managing the recieved applications. Admin console has functionalities to review, approve, archive and extend ongoing and new internships to the organization. Acceptance and Extension Letters are automatically system generated on approval with the correct applicant's details set. Generates reports of all applications on request.",
-      technologies: [
-        "React",
-        "Node",
-        "Express",
-        "SqlServer",
-        "Sequelize",
-        "Chart.js",
-      ],
-      githubLink: "https://github.com/supa-modo/internship-web-portal",
-      liveLink: "https://eac-internship-applications-portal.vercel.app/",
-      image: eac1,
+        "A static website for a gym to showcase their services and receive enquiries and communications with potential clients. Site showcases their gym facilities and priccing and amenities among more other features.",
+      technologies: ["React", "TailwindCss", "Framer Motion", "Shadcn"],
+      githubLink: "https://github.com/supa-modo/gym-website",
+      liveLink: "https://elite-fitness-zeta.vercel.app/",
+      image: elite1,
     },
   ];
 
