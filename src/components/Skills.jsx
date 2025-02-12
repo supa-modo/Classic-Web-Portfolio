@@ -12,6 +12,7 @@ import {
   SiKubernetes,
   SiTailwindcss,
   SiNextdotjs,
+  SiDotnet,
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import {
@@ -30,39 +31,43 @@ import { HiOutlineDesktopComputer, HiSupport } from "react-icons/hi";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Frontend",
+      category: "Frontend Development",
+      description: "Building beautiful, responsive user interfaces",
       skills: [
-        { name: "ReactJS", icon: SiReact, color: "#61DAFB" },
+        { name: "React", icon: SiReact, color: "#61DAFB" },
         { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
         { name: "Flutter", icon: SiFlutter, color: "#02569B" },
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38B2AC" },
       ],
     },
     {
-      category: "Backend",
+      category: "Backend Engineering",
+      description: "Crafting robust server-side solutions",
       skills: [
         { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
         { name: "Express", icon: SiExpress, color: "#000000" },
-
         { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+        { name: ".NET Core", icon: SiDotnet, color: "#9370db" },
       ],
     },
     {
       category: "Cloud & DevOps",
+      description: "Deploying and scaling applications",
       skills: [
-        { name: "Azure CLI", icon: VscAzure, color: "#02569B" },
-        { name: "Docker", icon: FaDocker, color: "#02569B" },
-        { name: "GitHub Actions", icon: FaGithub, color: "#02569B" },
+        { name: "Azure", icon: VscAzure, color: "#0089D6" },
+        { name: "Docker", icon: FaDocker, color: "#2496ED" },
+        { name: "GitHub", icon: FaGithub, color: "#181717" },
         { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
       ],
     },
     {
-      category: "Databases",
+      category: "Database Management",
+      description: "Designing and optimizing data solutions",
       skills: [
         { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
         { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
         { name: "SQL Server", icon: DiMsqlServer, color: "#CC2927" },
-        { name: "Sequelize ORM", icon: SiSequelize, color: "#CC2927" },
+        { name: "Sequelize", icon: SiSequelize, color: "#52B0E7" },
       ],
     },
   ];
@@ -118,9 +123,12 @@ const Skills = () => {
               className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="py-4 px-6">
-                <h3 className="text-lg font-semibold text-gray-700 mb-2 text-center border-b pb-2">
+                <h3 className="text-lg font-semibold text-gray-700 mb-2 text-center">
                   {category.category}
                 </h3>
+                <p className="text-center text-sm  border-b pb-2 mb-4">
+                  {category.description}
+                </p>
                 <div className="grid grid-cols-2 gap-3">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
@@ -181,9 +189,9 @@ const Skills = () => {
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex flex-col items-center justify-center space-y-2 p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/10 cursor-pointer group"
+                  className="flex flex-col items-center justify-center space-y-2 border p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 cursor-pointer group"
                 >
-                  <div className="bg-white/90 p-3 rounded-full group-hover:bg-white transition-colors">
+                  <div className="bg-white/50 p-3 rounded-full group-hover:bg-white transition-colors">
                     <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
                       +
                     </span>

@@ -4,6 +4,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Experience from "./ExperiencePage";
 import Footer from "../components/Footer";
+import SkillsSection from "../components/RJ";
 
 const Home = () => {
   return (
