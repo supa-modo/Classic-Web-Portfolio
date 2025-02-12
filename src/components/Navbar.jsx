@@ -81,7 +81,7 @@ const Navbar = () => {
             >
               <div className="flex space-x-6 items-center">
                 <img src={Portfolio} alt="logo" className="w-12 h-12" />
-                <span>Eddy O. Odhiambo</span>
+                <span>Eddy Odhiambo</span>
               </div>
             </motion.div>
 

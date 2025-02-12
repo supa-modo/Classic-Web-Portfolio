@@ -47,18 +47,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative font-poppins bg-gradient-to-br from-[#dfe9f3] to-[#F0F9FF] text-gray-800 py-10 overflow-hidden">
+    <footer className="relative font-poppins bg-gradient-to-br from-[#dfe9f3] to-[#F0F9FF] text-gray-800 py-6 md:py-10 overflow-hidden">
       {/* Subtle background shapes */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-sky-200 to-blue-200 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-l from-sky-100 to-white rounded-full blur-3xl animate-pulse"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
           {/* Social Links */}
           <motion.div
-            className="flex justify-center space-x-5"
+            className="flex flex-wrap justify-center gap-3 md:gap-4 md:space-x-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, staggerChildren: 0.1 }}
@@ -74,13 +74,13 @@ const Footer = () => {
                 whileTap={{ scale: 0.9 }}
               >
                 <div
-                  className="absolute -inset-2 bg-white/30 rounded-full blur-md group-hover:opacity-50 transition-all duration-300"
+                  className="absolute -inset-1.5 sm:-inset-2 bg-white/30 rounded-full blur-md group-hover:opacity-50 transition-all duration-300"
                   style={{ backgroundColor: `${link.color}20` }}
                 ></div>
                 <link.icon
-                  size={26}
+                  size={22}
+                  className="w-5 h-5 sm:w-6 sm:h-6 relative transform transition-transform duration-300 group-hover:scale-110"
                   color={link.color}
-                  className="relative transform transition-transform duration-300 group-hover:scale-110"
                 />
               </motion.a>
             ))}
@@ -88,15 +88,15 @@ const Footer = () => {
 
           {/* Creative CTA */}
           <motion.div
-            className="space-y-6"
+            className="space-y-4 md:space-y-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <h3 className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500">
               Let's Create Something Extraordinary
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm">
+            <p className="text-gray-600 max-w-2xl mx-auto text-xs sm:text-sm">
               Transforming ideas into visually stunning designs. Ready to bring
               your creative vision to life?
             </p>
@@ -106,7 +106,7 @@ const Footer = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="px-8 py-[10px] bg-gradient-to-r from-sky-500 to-blue-500 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 transform rounded-lg">
+              <div className="px-5 py-1.5 sm:px-6 sm:py-2 md:px-8 md:py-[10px] bg-gradient-to-r from-sky-500 to-blue-500 text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-2xl transition-all duration-300 transform rounded-lg">
                 Get in Touch
               </div>
             </motion.a>
@@ -114,13 +114,13 @@ const Footer = () => {
 
           {/* Copyright with Artistic Touch */}
           <motion.div
-            className="mt-10 text-gray-500 text-sm pt-4 border-t border-sky-500/30"
+            className="mt-6 md:mt-10 text-gray-500 text-xs sm:text-sm pt-4 border-t border-sky-500/30"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <p>© {currentYear} Eddy Ochieng Odhiambo. All Rights Reserved.</p>
-            <p className="text-xs mt-2 text-gray-400">
+            <p className="text-[10px] sm:text-xs mt-1 sm:mt-2 text-gray-400">
               Crafted with creativity and passion 😎👍
             </p>
           </motion.div>

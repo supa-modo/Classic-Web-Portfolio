@@ -98,22 +98,21 @@ const Skills = () => {
   return (
     <section id="skills" className="py-16 md:py-20 font-poppins">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 relative inline-block pb-1 md:mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+        {/* Section Header */}
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold relative inline-block pb-2 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
             Skills and Expertise
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
-              transition={{
-                duration: 1.4,
-                ease: "easeInOut",
-              }}
-              className="absolute mx-auto bottom-[-12px] left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
+              transition={{ duration: 1.4, ease: "easeInOut" }}
+              className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
             />
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Main Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -122,20 +121,22 @@ const Skills = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="py-4 px-6">
-                <h3 className="text-lg font-semibold text-gray-700 mb-2 text-center">
+              <div className="p-4 md:p-6">
+                {/* Category Header */}
+                <h3 className="text-base md:text-lg font-semibold text-gray-700 mb-2 text-center">
                   {category.category}
                 </h3>
-                <p className="text-center text-sm  border-b pb-2 mb-4">
+                <p className="text-xs md:text-sm text-center border-b pb-2 mb-4">
                   {category.description}
                 </p>
-                <div className="grid grid-cols-2 gap-3">
+
+                {/* Skills Grid */}
+                <div className="grid grid-cols-2 gap-2 md:gap-3">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skillIndex}
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex flex-col items-center space-y-2 p-2 rounded-lg hover:bg-gray-200 transition-colors cursor-pointer group"
+                      className="flex flex-col items-center p-2 rounded-lg hover:bg-gray-100"
                     >
                       <div className="bg-gray-200 p-3 rounded-full group-hover:bg-gray-300 transition-colors">
                         <skill.icon
@@ -144,7 +145,7 @@ const Skills = () => {
                           className="transition-transform"
                         />
                       </div>
-                      <span className="text-[13px] text-gray-500 text-center font-semibold">
+                      <span className="text-xs md:text-sm text-gray-500 mt-2 font-medium">
                         {skill.name}
                       </span>
                     </motion.div>
@@ -153,58 +154,60 @@ const Skills = () => {
               </div>
             </motion.div>
           ))}
-
-          {/* Miscellaneous Skills Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="lg:col-span-4 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-          >
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-700 mb-5 text-center border-b pb-3">
-                Additional Technical Skills
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                {miscellaneousSkills.map((skill, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex flex-col items-center space-y-2 p-3 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group"
-                  >
-                    <div className="bg-gray-100 p-5 rounded-full group-hover:bg-gray-300 transition-colors">
-                      <skill.icon
-                        size={30}
-                        color={skill.color}
-                        className="transition-transform"
-                      />
-                    </div>
-                    <span className="text-[13px] text-gray-400 text-center font-semibold">
-                      {skill.name}
-                    </span>
-                  </motion.div>
-                ))}
-                {/* Stylish "+ others" element */}
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex flex-col items-center justify-center space-y-2 border p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 cursor-pointer group"
-                >
-                  <div className="bg-white/50 p-3 rounded-full group-hover:bg-white transition-colors">
-                    <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
-                      +
-                    </span>
-                  </div>
-                  <span className="text-sm text-gray-500 font-semibold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
-                    Others...
-                  </span>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
         </div>
-      </div>
+
+         {/* Miscellaneous Skills Card */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.8 }}
+  className="lg:col-span-4 mt-6 md:mt-8 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+>
+  <div className="p-4 md:p-6">
+    <h3 className="text-lg md:text-xl font-semibold text-gray-700 mb-4 md:mb-5 text-center border-b pb-3">
+      Additional Technical Skills
+    </h3>
+    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 md:gap-4">
+      {miscellaneousSkills.map((skill, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex flex-col items-center space-y-1 md:space-y-2 p-2 md:p-3 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group"
+        >
+          <div className="bg-gray-100 p-3 md:p-4 rounded-full group-hover:bg-gray-300 transition-colors">
+            <skill.icon
+              size={24}
+              color={skill.color}
+              className="transition-transform"
+            />
+          </div>
+          <span className="text-[11px] md:text-[13px] text-gray-400 text-center font-medium md:font-semibold line-clamp-2">
+            {skill.name}
+          </span>
+        </motion.div>
+      ))}
+      
+      {/* Stylish "+ others" element */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="flex flex-col items-center justify-center space-y-1 md:space-y-2 border p-2 md:p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 cursor-pointer group"
+      >
+        <div className="bg-white/50 p-2 md:p-3 rounded-full group-hover:bg-white transition-colors">
+          <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
+            +
+          </span>
+        </div>
+        <span className="text-xs md:text-sm text-gray-500 font-medium md:font-semibold bg-clip-text text-transparent bg-gradient-to-br from-primary to-secondary">
+          Others...
+        </span>
+      </motion.div>
+    </div>
+  </div>
+</motion.div>
+        </div>
+      
     </section>
   );
 };

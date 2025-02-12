@@ -56,7 +56,7 @@ const HeroAbout = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="inline-block px-6 py-2 bg-primary/10 rounded-xl"
               >
-                <span className="text-primary/70 font-semibold">
+                <span className="text-primary/70 font-semibold text-[0.83rem] md:text-[0.95rem]">
                   Full Stack Software Developer
                 </span>
               </motion.div>
@@ -123,7 +123,7 @@ const HeroAbout = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-9 py-2 text-[0.8rem] md:text-sm bg-gradient-to-r from-primary/60 to-secondary text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+                className="px-8 py-2 text-[0.8rem] md:text-sm bg-gradient-to-r from-primary/60 to-secondary text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
                 onClick={handleDownloadResume}
               >
                 <Download size={20} />
@@ -132,7 +132,7 @@ const HeroAbout = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-2 text-[0.8rem] md:text-sm border-2 border-primary/20 text-primary rounded-lg hover:bg-primary/5 transition-all"
+                className="px-8 py-2 text-[0.8rem] md:text-sm border-2 border-primary/20 text-primary rounded-lg hover:bg-primary/5 transition-all"
                 onClick={() => {
                   navigate("/projects");
                 }}
@@ -159,7 +159,9 @@ const HeroAbout = () => {
                   <div className="font-bold text-xl text-gray-800">
                     {stat.value}
                   </div>
-                  <div className="text-[0.8rem] md:text-sm text-gray-500">{stat.label}</div>
+                  <div className="text-[0.8rem] md:text-sm text-gray-500">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -174,11 +176,15 @@ const HeroAbout = () => {
               >
                 <div className="flex items-center space-x-2">
                   <MapPin size={18} className="text-red-500" />
-                  <span className="text-[0.8rem] md:text-sm">Nairobi, Kenya</span>
+                  <span className="text-[0.8rem] md:text-sm">
+                    Nairobi, Kenya
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail size={18} className="text-primary" />
-                  <span className="text-[0.8rem] md:text-sm">eddieodhiambo11@gmail.com</span>
+                  <span className="text-[0.8rem] md:text-sm">
+                    eddieodhiambo11@gmail.com
+                  </span>
                 </div>
               </motion.div>
             </div>
