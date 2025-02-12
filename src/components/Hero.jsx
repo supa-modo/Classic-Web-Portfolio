@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { Download, Code, Briefcase, Award, MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import profileImg from "/photo.jpg?url";
+import { useNavigate } from "react-router-dom";
 
 const HeroAbout = () => {
+  const navigate = useNavigate();
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = "/EddyOchiengOdhiambo-Resume.pdf";
@@ -63,7 +65,7 @@ const HeroAbout = () => {
                   Eddy Ochieng Odhiambo
                 </span>
               </h1>
-              <p className="text-gray-600 text-sm md:text-lg">
+              <p className="text-gray-600 text-[0.85rem] md:text-lg">
                 Professional Developer crafting innovative, competent digital
                 solutions with creativity and technical expertise. Transforming
                 ideas into elegant, efficient professional code.
@@ -121,7 +123,8 @@ const HeroAbout = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-2 text-sm bg-gradient-to-r from-primary/60 to-secondary text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+                className="px-9 py-2 text-[0.8rem] md:text-sm bg-gradient-to-r from-primary/60 to-secondary text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+                onClick={handleDownloadResume}
               >
                 <Download size={20} />
                 <span>Download my CV</span>
@@ -129,7 +132,10 @@ const HeroAbout = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-2 text-sm border-2 border-primary/20 text-primary rounded-lg hover:bg-primary/5 transition-all"
+                className="px-10 py-2 text-[0.8rem] md:text-sm border-2 border-primary/20 text-primary rounded-lg hover:bg-primary/5 transition-all"
+                onClick={() => {
+                  navigate("/projects");
+                }}
               >
                 View Projects
               </motion.button>
@@ -153,7 +159,7 @@ const HeroAbout = () => {
                   <div className="font-bold text-xl text-gray-800">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-500">{stat.label}</div>
+                  <div className="text-[0.8rem] md:text-sm text-gray-500">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -168,11 +174,11 @@ const HeroAbout = () => {
               >
                 <div className="flex items-center space-x-2">
                   <MapPin size={18} className="text-red-500" />
-                  <span className="text-sm">Nairobi, Kenya</span>
+                  <span className="text-[0.8rem] md:text-sm">Nairobi, Kenya</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail size={18} className="text-primary" />
-                  <span className="text-sm">eddieodhiambo11@gmail.com</span>
+                  <span className="text-[0.8rem] md:text-sm">eddieodhiambo11@gmail.com</span>
                 </div>
               </motion.div>
             </div>
