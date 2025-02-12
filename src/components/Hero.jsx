@@ -14,184 +14,186 @@ const HeroAbout = () => {
     document.body.removeChild(link);
   };
 
-  const stats = [
-    {
-      icon: <Briefcase size={30} className="text-primary" />,
-      value: "2+",
-      label: "Years of Experience",
-    },
-    {
-      icon: <Code size={30} className="text-primary" />,
-      value: "15+",
-      label: "Completed Stylish Projects",
-    },
-    {
-      icon: <Award size={30} className="text-primary" />,
-      value: "3+",
-      label: "Tech Certifications",
-    },
-  ];
-
   const socialLinks = [
     {
       icon: FaGithub,
       href: "https://github.com/supa-modo",
       color: "#5E81AC",
+      name: "My Github",
     },
     {
       icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/your-profile",
+      href: "https://linkedin.com/in/eddy-o-odhiambo",
       color: "#4299E1",
+      name: "LinkedIn",
     },
   ];
 
   return (
     <section
       id="hero"
-      className="relative py-24 md:pt-48 font-poppins overflow-hidden"
+      className="relative py-24 md:pt-36 font-poppins overflow-hidden"
     >
-      {/* Subtle Background Gradient */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-sky-200 to-blue-200 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-l from-sky-100 to-white rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-l from-primary/10 to-secondary/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Text Content */}
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <div>
-              <p className="text-lg text-gray-600 mb-2">Hello, I'm</p>
-              <h1 className="text-4xl font-bold text-gray-700 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-                Eddy Ochieng Odhiambo
+            <div className="space-y-5">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-block px-6 py-2 bg-primary/10 rounded-xl"
+              >
+                <span className="text-primary/70 font-semibold">
+                  Full Stack Software Developer
+                </span>
+              </motion.div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight font-nunito">
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Eddy Ochieng Odhiambo
+                </span>
               </h1>
-              <h2 className="text-xl md:text-2xl font-semibold text-gray-500 mt-2">
-                A FullStack Software Developer & Creative Designer
-              </h2>
+              <p className="text-gray-600 text-sm md:text-lg">
+                Professional Developer crafting innovative, competent digital
+                solutions with creativity and technical expertise. Transforming
+                ideas into elegant, efficient professional code.
+              </p>
             </div>
 
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-              I am a passionate developer crafting innovative and competent
-              digital solutions with a blend of creativity and technical
-              expertise. Transforming ideas into elegant, efficient professional
-              code.
-            </p>
-
-            {/* Skills Highlight */}
-            <div className="flex flex-wrap gap-2">
+            {/* Skills */}
+            <div className="flex flex-wrap gap-3">
               {[
                 "React",
                 "Node.js",
                 "Express",
                 "Flutter",
-                "SqlServer",
-                "MongoDB",
+                "SQLServer",
                 "PostgreSQL",
+                "MongoDB",
               ].map((skill) => (
-                <span
+                <motion.span
                   key={skill}
-                  className="px-3 py-1 bg-primary/10 text-primary rounded-lg text-[11px] md:text-xs font-semibold"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="px-4 py-1 bg-primary/15 border border-primary/5 shadow-lg rounded-lg text-xs md:text-[0.8rem] font-semibold text-primary/70"
                 >
                   {skill}
-                </span>
+                </motion.span>
               ))}
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex items-center pt-2 space-x-4">
+            {/* Social Links */}
+            <div className="flex space-x-6 pl-4">
+              {socialLinks.map((link, index) => (
+                <motion.a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="flex space-x-2 items-center"
+                >
+                  <link.icon
+                    size={26}
+                    color={link.color}
+                    className="hover:text-opacity-80 transition-all"
+                  />
+                  <span className="text-sm font-semibold text-gray-500">
+                    {link.name}
+                  </span>
+                </motion.a>
+              ))}
+            </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleDownloadResume}
-                className="px-6 py-2 bg-gradient-to-br from-secondary to-primary/30 text-white rounded-lg shadow-md hover:shadow-lg transition-all"
+                className="px-10 py-2 text-sm bg-gradient-to-r from-primary/60 to-secondary text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+              >
+                <Download size={20} />
+                <span>Download my CV</span>
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-2 text-sm border-2 border-primary/20 text-primary rounded-lg hover:bg-primary/5 transition-all"
+              >
+                View Projects
+              </motion.button>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-3 pt-6">
+              {[
+                { icon: Briefcase, value: "2+", label: "Years" },
+                { icon: Code, value: "15+", label: "Projects" },
+                { icon: Award, value: "3+", label: "Certificates" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="px-4 py-3 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all text-center"
+                >
+                  <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
+                  <div className="font-bold text-xl text-gray-800">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-gray-500">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="container mx-auto px-4 relative z-10">
+              {/* Location and Contact Details */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex justify-center items-center space-x-6 text-gray-500 mb-8"
               >
                 <div className="flex items-center space-x-2">
-                  <Download size={18} />
-                  <span className="text-sm ">Download my CV / Resume</span>
+                  <MapPin size={18} className="text-red-500" />
+                  <span className="text-sm">Nairobi, Kenya</span>
                 </div>
-              </motion.button>
-
-              {/* Social Links */}
-              <div className="flex space-x-6">
-                {socialLinks.map((link, index) => (
-                  <motion.a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <link.icon
-                      size={26}
-                      color={link.color}
-                      className="hover:text-opacity-80 transition-all"
-                    />
-                  </motion.a>
-                ))}
-              </div>
+                <div className="flex items-center space-x-2">
+                  <Mail size={18} className="text-primary" />
+                  <span className="text-sm">eddieodhiambo11@gmail.com</span>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
-          {/* Profile Image */}
+          {/* Image Section */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center items-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative "
           >
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-2xl" />
+            <div className="relative aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
               <img
                 src={profileImg}
-                alt="Eddy Ochieng Odhiambo"
-                className="relative z-10 w-80 h-80 object-cover rounded-full shadow-lg"
+                alt="Eddy Ochieng Odhiambo Profile"
+                className="object-cover "
               />
             </div>
           </motion.div>
         </div>
-
-        <div className="container mx-auto pt-16 px-4 relative z-10">
-          {/* Location and Contact Details */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center items-center space-x-6 text-gray-500 mb-8"
-          >
-            <div className="flex items-center space-x-2">
-              <MapPin size={18} className="text-red-500" />
-              <span className="text-sm">Nairobi, Kenya</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail size={18} className="text-primary" />
-              <span className="text-sm">eddieodhiambo11@gmail.com</span>
-            </div>
-          </motion.div>
-        </div>
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 grid md:grid-cols-3 gap-6"
-        >
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all"
-            >
-              <div className="flex justify-center mb-4">{stat.icon}</div>
-              <h3 className="text-3xl font-bold text-gray-700">{stat.value}</h3>
-              <p className="text-gray-500 text-sm">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import Experience from "./pages/ExperiencePage";
 import Skills from "./pages/SkillsPage";
 import Footer from "./components/Footer";
+import NavbarAndHero from "./components/RJ";
 
 const theme = createTheme({
   palette: {
@@ -49,6 +50,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<NavbarAndHero />} /> */}
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />

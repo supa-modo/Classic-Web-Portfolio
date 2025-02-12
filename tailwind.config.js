@@ -13,6 +13,8 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        nunito: ["Nunito Sans", "sans-serif"],
+        open: ["Open Sans", "sans-serif"],
       },
       container: {
         center: true,
