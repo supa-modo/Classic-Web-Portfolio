@@ -112,7 +112,7 @@ const HeroAbout = () => {
                     color={link.color}
                     className="hover:text-opacity-80 transition-all"
                   />
-                  <span className="text-sm font-semibold text-gray-500">
+                  <span className="text-xs sm:text-sm font-semibold text-gray-500">
                     {link.name}
                   </span>
                 </motion.a>

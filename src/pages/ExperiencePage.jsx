@@ -105,7 +105,7 @@ const Experience = () => {
                     <p className="text-xs md:text-[13px] text-secondary font-semibold pt-1 pb-2 md:pb-3 font-poppins text-start">
                       {exp.period}
                     </p>
-                    <p className="text-sm md:text-[15px] text-gray-500 font-poppins text-start">
+                    <p className="text-xs sm:text-sm md:text-[15px] text-gray-500 font-poppins text-start">
                       {exp.description}
                     </p>
                     <Box sx={{ mt: 2 }}>
@@ -123,7 +123,7 @@ const Experience = () => {
                             display: "inline-block",
                             mb: 1,
                             fontFamily: "Poppins",
-                            fontSize: "0.75rem",
+                            fontSize: "0.74rem",
                           }}
                         >
                           {skill}

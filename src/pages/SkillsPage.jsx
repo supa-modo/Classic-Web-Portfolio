@@ -63,14 +63,14 @@ const Skills = () => {
         </h2>
         <Grid container spacing={4}>
           {skillCategories.map((category, categoryIndex) => (
-            <Grid item xs={12} md={6} key={category.title}>
+            <Grid item xs={12} md={6} key={category.title} c>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
               >
                 <Paper sx={{ p: 3, borderRadius: 5 }}>
-                  <h2 className="font-semibold font-poppins text-lg text-gray-500">
+                  <h2 className="font-semibold font-poppins text-sm sm:text-base md:text-lg text-gray-500">
                     {category.title}
                   </h2>
                   {category.skills.map((skill, skillIndex) => (
@@ -82,8 +82,12 @@ const Skills = () => {
                           mb: 1,
                         }}
                       >
-                        <p className="font-poppins text-sm">{skill.name}</p>
-                        <p className="font-poppins text-sm">{skill.level}%</p>
+                        <p className="font-poppins text-xs sm:text-sm">
+                          {skill.name}
+                        </p>
+                        <p className="font-poppins text-xs sm:text-sm">
+                          {skill.level}%
+                        </p>
                       </Box>
                       <Box
                         sx={{
