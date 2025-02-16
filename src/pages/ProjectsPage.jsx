@@ -56,7 +56,7 @@ const ProjectsPage = () => {
     <div className="min-h-screen font-poppins">
       <div className="container mx-auto px-4 pt-24 pb-8">
         <div className="text-center mb-4">
-          <h2 className="text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-700 relative inline-block pb-1 mb-8 bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
             Projects Completed
             <motion.div
               initial={{ width: 0 }}
@@ -68,7 +68,7 @@ const ProjectsPage = () => {
               className="absolute mx-auto bottom-[-12px] left-0 h-[2px] bg-gradient-to-r from-secondary to-white"
             />
           </h2>
-          <p className="pb-2">
+          <p className="pb-2 text-sm md:text-base">
             Choose a project from the left Navigation to view it on the right
             section. Click on an image to view or zoom fullscreen.
           </p>
@@ -181,10 +181,10 @@ const ProjectsPage = () => {
             </div>
 
             <div className="p-6 flex-1">
-              <h2 className="text-lg md:text-xl font-bold text-secondary-two/70 mb-4">
+              <h2 className="text-base sm:text-lg md:text-xl font-bold text-secondary-two/70 mb-4">
                 {projects[currentProject].name}
               </h2>
-              <p className="text-gray-500 text-sm md:text-base line-clamp-3 mb-6">
+              <p className="text-gray-500 text-xs sm:text-sm md:text-base line-clamp-3 mb-6">
                 {projects[currentProject].description}
               </p>
 
