@@ -5,6 +5,10 @@ import eac3 from "../assets/images/eac/eac3.png";
 import eac4 from "../assets/images/eac/eac4.png";
 import eac5 from "../assets/images/eac/eac5.png";
 import eac6 from "../assets/images/eac/eac6.png";
+import eac7 from "../assets/images/eac/eac7.png";
+import eac8 from "../assets/images/eac/eac8.png";
+import eac9 from "../assets/images/eac/eac9.png";
+import eac10 from "../assets/images/eac/eac10.png";
 // Import images for msafiri project
 import msafiri1 from "../assets/images/msafiri/msafiri1.jpg";
 import msafiri2 from "../assets/images/msafiri/msafiri2.jpg";
@@ -216,7 +220,7 @@ const projectImages = {
     kms11,
     kms12,
   ],
-  eac: [eac1, eac2, eac3, eac4, eac5, eac6],
+  eac: [eac1, eac2, eac3, eac4, eac5, eac6, eac7, eac8, eac9, eac10],
   elite: [
     elite1,
     elite2,
