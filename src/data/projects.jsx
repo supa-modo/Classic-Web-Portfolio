@@ -89,6 +89,7 @@ import kms8 from "../assets/images/kms/kms8.png";
 import kms9 from "../assets/images/kms/kms9.png";
 import kms10 from "../assets/images/kms/kms10.png";
 import kms11 from "../assets/images/kms/kms11.png";
+import kms12 from "../assets/images/kms/kms11.png";
 // Import images for Meeting Attendance project
 import rent1 from "../assets/images/rent/rent01.png";
 import rent2 from "../assets/images/rent/rent1.png";
@@ -201,7 +202,20 @@ const projectImages = {
     meetings10,
     meetings11,
   ],
-  kms: [kms1, kms2, kms3, kms4, kms5, kms6, kms7, kms8, kms9, kms10, kms11],
+  kms: [
+    kms1,
+    kms2,
+    kms3,
+    kms4,
+    kms5,
+    kms6,
+    kms7,
+    kms8,
+    kms9,
+    kms10,
+    kms11,
+    kms12,
+  ],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6],
   elite: [
     elite1,
