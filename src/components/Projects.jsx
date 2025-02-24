@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import esoko3 from "../assets/images/esoko/esoko3.png";
+import jobs1 from "../assets/images/jobs/jobs1.png";
 import kms1 from "../assets/images/kms/kms1.png";
 import welfare1 from "../assets/images/welfare/welfare1.png";
 import hslive1 from "../assets/images/hslive/hslive01.png";
@@ -23,13 +23,13 @@ const Projects = () => {
       image: welfare1,
     },
     {
-      name: "eSoko E-commerce Fashion Store",
+      name: "HR Recruitment Management System",
       description:
-        "A full-stack e-commerce platform that connects buyers to eSoko's fashion collection of men's, women's and children's clothes and accessories.",
-      technologies: ["React", "Vite", "Redux", "Node.Js", "Express"],
-      githubLink: "https://github.com/private-repo/esoko",
-      liveLink: "https://icy-smoke-09e427410.4.azurestaticapps.net/",
-      image: esoko3,
+        "A comprehensive HR platform for managing job postings, candidate applications, interview scheduling, and hiring processes. Features include applicant tracking, resume parsing, and team collaboration tools.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Redis"],
+      githubLink: "https://github.com/supa-modo/job-portal-frontend",
+      liveLink: "https://recruitment-portal-eight.vercel.app/",
+      image: jobs1,
     },
     {
       name: "Private Jet Charter Site",

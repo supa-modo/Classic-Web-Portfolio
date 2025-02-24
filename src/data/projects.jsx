@@ -13,6 +13,16 @@ import eac10 from "../assets/images/eac/eac10.png";
 import msafiri1 from "../assets/images/msafiri/msafiri1.jpg";
 import msafiri2 from "../assets/images/msafiri/msafiri2.jpg";
 import msafiri3 from "../assets/images/msafiri/msafiri3.jpg";
+// Import images for recruitment project
+import jobs1 from "../assets/images/jobs/jobs1.png";
+import jobs2 from "../assets/images/jobs/jobs2.png";
+import jobs3 from "../assets/images/jobs/jobs3.png";
+import jobs4 from "../assets/images/jobs/jobs4.png";
+import jobs5 from "../assets/images/jobs/jobs5.png";
+import jobs6 from "../assets/images/jobs/jobs6.png";
+import jobs7 from "../assets/images/jobs/jobs7.png";
+import jobs8 from "../assets/images/jobs/jobs8.png";
+import jobs9 from "../assets/images/jobs/jobs9.png";
 // Import images for farm project
 import farm1 from "../assets/images/flutter-farm/farm1.jpg";
 import farm2 from "../assets/images/flutter-farm/farm2.jpg";
@@ -221,6 +231,7 @@ const projectImages = {
     kms12,
   ],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6, eac7, eac8, eac9, eac10],
+  jobs: [jobs1, jobs2, jobs3, jobs4, jobs5, jobs6, jobs7, jobs8, jobs9],
   elite: [
     elite1,
     elite2,
@@ -290,6 +301,15 @@ const projectImages = {
 };
 
 export const projects = [
+  {
+    name: "HR Recruitment System",
+    description:
+      "A comprehensive HR platform for managing job postings, candidate applications, interview scheduling, and hiring processes. Features include applicant tracking, resume parsing, and team collaboration tools.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Redis"],
+    images: projectImages.jobs,
+    githubLink: "https://github.com/supa-modo/job-portal-frontend",
+    liveLink: "https://recruitment-portal-eight.vercel.app/",
+  },
   {
     name: "Private Jet Charter Site",
     description:
