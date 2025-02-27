@@ -23,6 +23,7 @@ import jobs6 from "../assets/images/jobs/jobs6.png";
 import jobs7 from "../assets/images/jobs/jobs7.png";
 import jobs8 from "../assets/images/jobs/jobs8.png";
 import jobs9 from "../assets/images/jobs/jobs9.png";
+import jobs02 from "../assets/images/jobs/jobs02.png";
 // Import images for farm project
 import farm1 from "../assets/images/flutter-farm/farm1.jpg";
 import farm2 from "../assets/images/flutter-farm/farm2.jpg";
@@ -231,7 +232,7 @@ const projectImages = {
     kms12,
   ],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6, eac7, eac8, eac9, eac10],
-  jobs: [jobs1, jobs2, jobs3, jobs4, jobs5, jobs6, jobs7, jobs8, jobs9],
+  jobs: [jobs1, jobs02, jobs2, jobs3, jobs4, jobs5, jobs6, jobs7, jobs8, jobs9],
   elite: [
     elite1,
     elite2,
