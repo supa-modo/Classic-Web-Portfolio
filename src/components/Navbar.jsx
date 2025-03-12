@@ -1,192 +1,153 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Download } from "lucide-react";
+import { motion } from "framer-motion";
 import Portfolio from "/portfolio.png";
-import { Link, useNavigate } from "react-router-dom";
-import ContactModal from "./ContactModal";
-import { TbMessage } from "react-icons/tb";
+import { useNavigate } from "react-router-dom";
+import { TbDownload } from "react-icons/tb";
+import { IoClose, IoMenu } from "react-icons/io5";
+import { MdMenuOpen } from "react-icons/md";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Skills", href: "#skills" },
+  { name: "Contact", href: "#contact" },
+];
+
+export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
+
+      // Update active section based on scroll position
+      const sections = navItems.map((item) => item.href.substring(1));
+      for (const section of sections.reverse()) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { name: "Home", type: "scroll", target: "hero" },
-    { name: "Experience", type: "route", target: "/experience" },
-    { name: "Projects", type: "scroll", target: "projects" },
-    { name: "Skills", type: "route", target: "/skills" },
-  ];
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
-  };
-
-  const handleNavigation = (item) => {
-    if (item.type === "scroll") {
-      if (window.location.pathname !== "/") {
-        navigate("/");
-        setTimeout(() => {
-          const element = document.getElementById(item.target);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      } else {
-        scrollToSection(item.target);
-      }
-    } else {
-      navigate(item.target);
-    }
-    setIsOpen(false);
-  };
-
   return (
-    <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className={`font-poppins fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/80 backdrop-blur-sm shadow-md "
-            : "bg-transparent"
-        }`}
-      >
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl font-bold bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent cursor-pointer"
-              onClick={() => navigate("/")}
-            >
-              <div className="flex space-x-6 items-center">
-                <img src={Portfolio} alt="logo" className="w-12 h-12" />
-                <span>Eddy Odhiambo</span>
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        isScrolled
+          ? "bg-slate-800/90 backdrop-blur-sm shadow-md border-b border-indigo-500/10"
+          : "bg-transparent"
+      }`}
+    >
+      <div className=" sm:w-[87%] mx-auto px-4">
+        <div className="flex md:h-20 h-16 items-center justify-between">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className=" cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            <div className="flex md:space-x-5 space-x-3 items-center">
+              <div className="md:rounded-2xl rounded-xl overflow-hidden w-12 h-10 sm:w-16 sm:h-14">
+                <img
+                  src="/logo.gif"
+                  alt="logo"
+                  className="w-full h-full object-fit"
+                />
               </div>
-            </motion.div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-10 items-center">
-              {navItems.map((item, index) => (
-                <motion.button
-                  key={item.name}
-                  onClick={() => handleNavigation(item)}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1,
-                  }}
-                  className="text-gray-600 hover:text-primary transition-colors font-semibold relative group"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
-                </motion.button>
-              ))}
-
-              <motion.button
-                onClick={() => setIsContactModalOpen(true)}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="px-6 py-2 bg-gradient-to-br from-secondary to-primary/30 text-white rounded-lg shadow-md hover:shadow-lg group"
-              >
-                <div className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform">
-                  <TbMessage size={20} className="group-hover:animate-bounce" />
-                  <span className="text-sm"> Contact Me</span>
-                </div>
-              </motion.button>
+              <span className="text-xl font-bold font-open bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                Eddy Odhiambo
+              </span>
             </div>
+          </motion.div>
 
-            {/* Mobile Menu Button - Moved inside the flex container */}
-            <motion.button
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleMenu}
-              className="md:hidden text-gray-600 focus:outline-none"
-            >
-              {isOpen ? (
-                <X size={24} className="text-red-500" />
-              ) : (
-                <Menu size={24} />
-              )}
-            </motion.button>
-          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className={`px-3 py-2 text-[0.92rem] font-bold font-open transition-colors relative ${
+                  activeSection === item.href.substring(1)
+                    ? "text-white"
+                    : "text-indigo-200/70 hover:text-white"
+                }`}
+              >
+                {item.name}
+                {activeSection === item.href.substring(1) && (
+                  <motion.span
+                    className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-indigo-500 to-purple-500"
+                    layoutId="navbar-indicator"
+                    transition={{ type: "spring", duration: 0.5 }}
+                  />
+                )}
+              </a>
+            ))}
+            <button className="ml-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold font-poppins border-0 flex items-center gap-2 px-5 py-2 rounded-lg text-[0.84rem]">
+              <TbDownload className="h-4 w-4" />
+              Resume/CV
+            </button>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden rounded-md p-2 text-indigo-200 hover:bg-indigo-500/10 hover:text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <IoClose className="h-6 w-6" />
+            ) : (
+              <IoMenu className="h-7 w-7" />
+            )}
+          </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation Overlay */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.2 }}
-              className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 py-4 px-4 md:hidden"
-            >
-              <div className="container mx-auto space-y-2">
-                {navItems.map((item, index) => (
-                  <motion.button
-                    key={item.name}
-                    onClick={() => handleNavigation(item)}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="w-full text-left px-4 py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-all flex items-center justify-between group"
-                  >
-                    <span className="font-medium text-sm">{item.name}</span>
-                    <motion.div
-                      initial={{ x: -4, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: index * 0.1 + 0.2 }}
-                      className="w-1.5 h-1.5 rounded-full bg-primary transform scale-0 group-hover:scale-100 transition-transform"
-                    />
-                  </motion.button>
-                ))}
-                <motion.button
-                  onClick={() => {
-                    setIsContactModalOpen(true);
-                    setIsOpen(false);
-                  }}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: navItems.length * 0.1 }}
-                  className="w-full mt-2 px-4 py-2.5 bg-gradient-to-br from-secondary to-primary/30 text-white rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 group"
-                >
-                  <TbMessage size={18} className="group-hover:animate-bounce" />
-                  <span className="font-medium text-sm">Contact Me</span>
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.nav>
-      {/* Contact Modal */}
-      <ContactModal
-        isOpen={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
-      />
-    </>
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          className="md:hidden bg-slate-900/95 backdrop-blur-md border-b border-indigo-500/10"
+        >
+          <div className="container mx-auto px-4 py-3 space-y-1">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className={`block px-3 py-2 text-base font-medium ${
+                  activeSection === item.href.substring(1)
+                    ? "text-white bg-indigo-500/10 rounded-md"
+                    : "text-indigo-200/70 hover:text-white"
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+            <div className="pt-2 pb-1">
+              <button className="w-full font-medium font-poppins bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0 flex items-center justify-center gap-1 px-3 py-1.5 rounded-md text-[0.8rem]">
+                <TbDownload className="h-5 w-5" />
+                Resume/CV
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </header>
   );
-};
-
-export default Navbar;
+}

@@ -1,21 +1,18 @@
-import React from "react";
-import Hero from "../components/Hero";
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
-import Experience from "./ExperiencePage";
-import Footer from "../components/Footer";
-import SkillsSection from "../components/RJ";
+import ExperienceSection from "../components/ExperienceSection";
+import SkillsSection from "../components/SkillsSection";
+import HeroSection from "../components/HeroSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 const Home = () => {
   return (
-    <div className="min-h-screen text-text relative">
+    <div className="min-h-screen text-text relative overflow-x-hidden">
       {/* Content */}
-      <div className="relative z-10">
-        <main>
-          <Hero />
-          <Skills />
-          <Projects />
-          <Experience />
+      <div className="relative z-10 w-full">
+        <main className="">
+          <HeroSection />
+          <ProjectsSection />
+          <ExperienceSection />
+          <SkillsSection />
         </main>
       </div>
     </div>

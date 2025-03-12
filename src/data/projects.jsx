@@ -306,34 +306,35 @@ export const projects = [
     name: "HR Recruitment System",
     description:
       "A comprehensive HR platform for managing job postings, candidate applications, interview scheduling, and hiring processes. Features include applicant tracking, resume parsing, and team collaboration tools.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Redis"],
+    tags: ["React", "Javascript", "Tailwindcss", "Node.js", "Express", "MongoDB", "Redis"],
     images: projectImages.jobs,
     githubLink: "https://github.com/supa-modo/job-portal-frontend",
     liveLink: "https://recruitment-portal-eight.vercel.app/",
   },
   {
-    name: "Private Jet Charter Site",
+    name: "Gym Website & Admin Mngt Console",
     description:
-      "A static webapp for a private jet charter company to showcase their services and receive enquiries and communications with potential clients. Site showcases their jet fleet along with priccing and amenities among more other features.",
-    tags: ["React", "TailwindCss", "Framer Motion"],
-    images: projectImages.hslive,
-    githubLink: "https://github.com/supa-modo/HsLive-Bookings",
-    liveLink: "https://www.shineluxuryprivatejets.com/",
-  },
-  {
-    name: "Gym Website",
-    description:
-      "A static website for a gym to showcase their services and receive enquiries and communications with potential clients. Site showcases their gym facilities and priccing and amenities among more other features.",
-    tags: ["React", "TailwindCss", "Framer Motion", "Shadcn"],
+      "A fullstack website for a gym to showcase their services and receive enquiries and communications with potential clients. Site showcases their gym facilities, pricing and classes, it also has a store section for users to purchase gym products and also a complete Admin management interface with a custom CMS for the store among many other features.",
+    tags: ["React", "TailwindCss", "Javascript", "Framer Motion", "Typescript", "Express", "PostgreSQL", "Sequelize"],
     images: projectImages.elite,
     githubLink: "https://github.com/supa-modo/gym-website",
     liveLink: "https://elite-fitness-zeta.vercel.app/",
   },
   {
+    name: "Private Jet Charter Site",
+    description:
+      "A static webapp for a private jet charter company to showcase their services and receive enquiries and communications with potential clients. Site showcases their jet fleet along with priccing and amenities among more other features.",
+    tags: ["React", "Javascript",  "TailwindCss", "Framer Motion"],
+    images: projectImages.hslive,
+    githubLink: "https://github.com/supa-modo/HsLive-Bookings",
+    liveLink: "https://www.shineluxuryprivatejets.com/",
+  },
+  
+  {
     name: "Staff Welfare Loans & Savings",
     description:
       "A demonstration of a full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records and interest accrued for staff members part of a welfare program in an organization.",
-    tags: ["React", "TailwindCss", "Node.js", "PostgreSql", "WebSockets"],
+    tags: ["React", "TailwindCss", "Node.js", "Javascript", "Express", "PostgreSql", "Sequelize", "WebSockets"],
     images: projectImages.welfare,
     githubLink: "https://github.com/supa-modo/Sacco-Welfare-Loans-and-Savings",
     liveLink: "https://sacco-welfare-loans-and-savings.vercel.app/",

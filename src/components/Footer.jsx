@@ -1,133 +1,316 @@
-import React from "react";
-import {
-  FaBehance,
-  FaDribbble,
-  FaInstagram,
-  FaLinkedinIn,
-  FaEnvelope,
-  FaGithub,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  ArrowUp,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  ChevronRight,
+} from "lucide-react";
+import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { PiMapPinAreaDuotone, PiPhoneListDuotone } from "react-icons/pi";
+import { TbMailFilled } from "react-icons/tb";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+export default function Footer() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const socialLinks = [
-    {
-      icon: FaGithub,
-      href: "https://github.com/supa-modo",
-      color: "#5E81AC",
-      label: "GitHub",
-    },
-    {
-      icon: FaWhatsapp,
-      href: "https://wa.me/254790193402",
-      color: "#2E8B57",
-      label: "Whatsapp",
-    },
-    {
-      icon: FaInstagram,
-      href: "https://instagram.com/eddy.odhiambo_",
-      color: "#E4405F",
-      label: "Instagram",
-    },
-    {
-      icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/eddy-o-odhiambo",
-      color: "#4299E1",
-      label: "LinkedIn",
-    },
-    {
-      icon: FaEnvelope,
-      href: "mailto:eddieodhiambo11@gmail.com",
-      color: "#718096",
-      label: "Email",
-    },
-  ];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitSuccess(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 3000);
+    }, 1500);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <footer className="relative font-poppins bg-gradient-to-br from-[#dfe9f3] to-[#F0F9FF] text-gray-800 py-6 md:py-10 overflow-hidden">
-      {/* Subtle background shapes */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-r from-sky-200 to-blue-200 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-l from-sky-100 to-white rounded-full blur-3xl animate-pulse"></div>
-      </div>
+    <footer id="contact" className="relative bg-slate-950 overflow-hidden z-40">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent" />
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
-          {/* Social Links */}
+      {/* Animated orbs */}
+      <div className="absolute top-20 -right-20 h-64 w-64 rounded-full bg-indigo-900/40 blur-3xl" />
+      <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-purple-900/30 blur-3xl" />
+
+      <div className="container relative z-10 mx-auto px-4 pt-10 pb-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-10">
+          {/* Logo and info */}
           <motion.div
-            className="flex flex-wrap justify-center gap-3 md:gap-4 md:space-x-5"
+            className="lg:col-span-4"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
-            {socialLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <div
-                  className="absolute -inset-1.5 sm:-inset-2 bg-white/30 rounded-full blur-md group-hover:opacity-50 transition-all duration-300"
-                  style={{ backgroundColor: `${link.color}20` }}
-                ></div>
-                <link.icon
-                  size={22}
-                  className="w-5 h-5 sm:w-6 sm:h-6 relative transform transition-transform duration-300 group-hover:scale-110"
-                  color={link.color}
-                />
-              </motion.a>
-            ))}
-          </motion.div>
+            <div className="space-y-5">
+              <div>
+                <div className="flex space-x-5 items-center">
+                  <div className="rounded-2xl overflow-hidden w-16 h-12">
+                    <img
+                      src="/logo.gif"
+                      alt="logo"
+                      className="w-full h-full object-fit"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                    Eddy Ochieng Odhiambo
+                  </h3>
+                </div>
 
-          {/* Creative CTA */}
-          <motion.div
-            className="space-y-4 md:space-y-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500">
-              Let's Create Something Extraordinary
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto text-xs sm:text-sm">
-              Transforming ideas into visually stunning designs. Ready to bring
-              your creative vision to life?
-            </p>
-            <motion.a
-              href="mailto:eddieodhiambo11@gmail.com"
-              className="inline-block group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="px-5 py-1.5 sm:px-6 sm:py-2 md:px-8 md:py-[10px] bg-gradient-to-r from-sky-500 to-blue-500 text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-2xl transition-all duration-300 transform rounded-lg">
-                Get in Touch
+                <p className="mt-2 text-slate-400 max-w-md">
+                  Fullstack Developer passionate about crafting modern web and
+                  mobile applications with clean code and exceptional user
+                  experiences.
+                </p>
               </div>
-            </motion.a>
+
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center gap-3  text-slate-300">
+                  <TbMailFilled className="h-5 w-5 text-indigo-400" />
+                  <a
+                    href="mailto:eddy@example.com"
+                    className="hover:text-indigo-300 transition-colors hover:underline underline-offset-4"
+                  >
+                    eddyodhiambo11@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-slate-300">
+                  <PiPhoneListDuotone className="h-5 w-5 text-indigo-400" />
+                  <a
+                    href="tel:+254790193402"
+                    className="hover:text-indigo-300 hover:underline underline-offset-4 transition-colors"
+                  >
+                    +254 790 193 402
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-slate-300">
+                  <PiMapPinAreaDuotone className="h-5 w-5 text-indigo-400" />
+                  <span>Nairobi, Kenya</span>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <SocialLink
+                  href="#"
+                  icon={<FaGithub className="h-5 w-5" />}
+                  label="GitHub"
+                />
+                <SocialLink
+                  href="#"
+                  icon={<FaLinkedin className="h-5 w-5" />}
+                  label="LinkedIn"
+                />
+                <SocialLink
+                  href="#"
+                  icon={<FaSquareXTwitter className="h-5 w-5" />}
+                  label="Twitter"
+                />
+                <SocialLink
+                  href="#"
+                  icon={<FaWhatsapp className="h-5 w-5" />}
+                  label="Instagram"
+                />
+              </div>
+            </div>
           </motion.div>
 
-          {/* Copyright with Artistic Touch */}
+          {/* Quick links */}
           <motion.div
-            className="mt-6 md:mt-10 text-gray-500 text-xs sm:text-sm pt-4 border-t border-sky-500/30"
+            className="lg:col-span-3"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            <p>© {currentYear} Eddy Ochieng Odhiambo. All Rights Reserved.</p>
-            <p className="text-[10px] sm:text-xs mt-1 sm:mt-2 text-gray-400">
-              Crafted with creativity and passion 😎👍
-            </p>
+            <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
+            <ul className="space-y-3">
+              <FooterLink href="#home" label="Home" />
+              <FooterLink href="#skills" label="Skills" />
+              <FooterLink href="#projects" label="Projects" />
+              <FooterLink href="#experience" label="Experience" />
+              <FooterLink href="#contact" label="Contact" />
+            </ul>
+          </motion.div>
+
+          {/* Contact Me Form */}
+          <motion.div
+            className="lg:col-span-5"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-xl font-bold text-white mb-5">Contact Me</h4>
+            <div className="bg-gradient-to-br from-slate-900/90 to-slate-950/90 backdrop-blur-sm rounded-xl border border-slate-700/30 p-6 shadow-lg">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="relative w-full">
+                      <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Your Name"
+                        className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
+                        required
+                      />
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
+                    </div>
+
+                    <div className="relative w-full">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Your Email"
+                        className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
+                        required
+                      />
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
+                    </div>
+                  </div>
+
+                  <div className="relative">
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="Your Message"
+                      rows="3"
+                      className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all resize-none"
+                      required
+                    />
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg px-6 py-2.5 text-white font-medium hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    </div>
+                  ) : (
+                    "Send Message"
+                  )}
+                </button>
+
+                {submitSuccess && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-green-400 text-sm text-center"
+                  >
+                    Message sent successfully!
+                  </motion.p>
+                )}
+              </form>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="mt-12 pt-4 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            © {new Date().getFullYear()} Eddy Ochieng Odhiambo. All rights
+            reserved.
+          </motion.p>
+
+          <motion.div
+            className="flex items-center gap-8 mt-4 md:mt-0"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <a href="#" className="hover:text-indigo-300 transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-indigo-300 transition-colors">
+              Terms of Service
+            </a>
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <motion.button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full p-3 text-white shadow-lg hover:shadow-indigo-500/30 transition-all"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <ArrowUp className="h-5 w-5" />
+      </motion.button>
     </footer>
   );
-};
+}
 
-export default Footer;
+// Helper components
+function FooterLink({ href, label }) {
+  return (
+    <motion.li
+      whileHover={{ x: 5 }}
+      transition={{ type: "spring", stiffness: 500, damping: 30 }}
+    >
+      <a
+        href={href}
+        className="text-slate-300 hover:text-indigo-300 transition-colors flex items-center gap-2"
+      >
+        <ChevronRight className="h-4 w-4 text-indigo-400" />
+        {label}
+      </a>
+    </motion.li>
+  );
+}
+
+function SocialLink({ href, icon, label }) {
+  return (
+    <motion.a
+      href={href}
+      aria-label={label}
+      className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800/70 text-indigo-300 border border-slate-700/50 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/20 transition-all duration-300"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      {icon}
+    </motion.a>
+  );
+}
