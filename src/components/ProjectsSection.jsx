@@ -69,26 +69,26 @@ export default function ProjectsSection() {
       <div className="container relative z-10 mx-auto px-4 w-full">
         {/* Section header */}
         <motion.div
-          className="text-center mb-10"
+          className="text-center mb-8 md:mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            className="inline-flex items-center justify-center px-5 py-1.5 mb-4 text-sm font-medium font-open rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
+            className="inline-flex items-center justify-center px-4 py-1 md:px-5 md:py-1.5 text-xs md:text-sm font-medium font-open rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <PiCodeDuotone className="w-5 h-5 mr-2" />
+            <PiCodeDuotone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             My Work
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-3 pb-3 bg-gradient-to-r from-slate-100 to-indigo-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-3 pb-2 md:pb-3 bg-gradient-to-r from-slate-100 to-indigo-300 bg-clip-text text-transparent">
             Featured Projects
           </h2>
 
-          <p className="text-lg text-indigo-100/80 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-indigo-100/80 max-w-2xl mx-auto px-4 md:px-0">
             Explore my portfolio of projects spanning web development, mobile
             applications, AI solutions, and blockchain innovations.
           </p>
@@ -218,9 +218,9 @@ export default function ProjectsSection() {
         </div>
 
         {/* Section divider */}
-        <div className="flex items-center justify-center mb-10">
-          <div className="h-px w-full max-w-sm bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
-          <span className="mx-4 text-indigo-300 text-sm font-bold font-open">
+        <div className="flex items-center justify-center mb-4 sm:mb-10">
+          <div className="h-px w-full max-w-lg bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
+          <span className="sm:mx-4  text-indigo-300 text-sm font-bold font-open">
             More Projects
           </span>
           <div className="h-px w-full max-w-sm bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
@@ -233,7 +233,7 @@ export default function ProjectsSection() {
           whileTap={{ cursor: "grabbing" }}
         >
           <motion.div
-            className="flex gap-6 px-2 py-4"
+            className="flex gap-6 sm:px-2 py-4"
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
             initial={{ x: 100, opacity: 0 }}
@@ -243,7 +243,7 @@ export default function ProjectsSection() {
             {projects.map((project, index) => (
               <motion.div
                 key={`carousel-${project.name}`}
-                className="relative min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] h-[360px] group rounded-2xl overflow-hidden flex-shrink-0 border border-slate-700/30 backdrop-blur-sm"
+                className="relative min-w-[280px] sm:min-w-[300px] md:min-w-[360px] lg:min-w-[420px] h-[320px] sm:h-[340px] md:h-[360px] group rounded-2xl overflow-hidden flex-shrink-0 border border-slate-700/30 backdrop-blur-sm"
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
@@ -258,7 +258,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Project content */}
-                <div className="absolute inset-0 flex flex-col justify-between p-2 sm:p-4 md:p-5">
+                <div className="absolute inset-0 flex flex-col justify-between p-1 sm:p-4">
                   <div className="flex items-center justify-between mb-4">
                     {/* Project tag */}
                     <span className="text-xs font-medium font-open bg-indigo-500/20 text-indigo-200 px-3 py-1 rounded-xl w-fit backdrop-blur-sm border border-indigo-500/20">
@@ -316,9 +316,9 @@ export default function ProjectsSection() {
         >
           <a
             href="/projects"
-            className="group relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-slate-800 to-slate-900 text-white font-nunito px-8 py-3 rounded-xl text-lg font-bold shadow-lg shadow-slate-900/20 transition-all duration-300 hover:shadow-indigo-500/20 border border-slate-700/30"
+            className="group relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-slate-800 to-slate-900 text-white font-nunito px-8 py-3 rounded-xl text-sm sm:text-base md:text-lg font-bold shadow-lg shadow-slate-900/20 transition-all duration-300 hover:shadow-indigo-500/20 border border-slate-700/30"
           >
-            <span className="relative z-10 flex items-center">
+            <span className="relative z-10  flex items-center">
               View All Projects
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </span>

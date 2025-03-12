@@ -7,7 +7,11 @@ import {
   ChevronRight,
   ExternalLink,
 } from "lucide-react";
-import { PiMapPinAreaDuotone, PiStackDuotone, PiUserListDuotone } from "react-icons/pi";
+import {
+  PiMapPinAreaDuotone,
+  PiStackDuotone,
+  PiUserListDuotone,
+} from "react-icons/pi";
 import { TbBriefcaseFilled, TbCalendarDot } from "react-icons/tb";
 
 export default function ExperienceSection() {
@@ -76,28 +80,28 @@ export default function ExperienceSection() {
 
       <div className="container relative z-10 mx-auto px-4 w-full">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-6 sm:mb-12 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
           <motion.div
-            className="inline-flex items-center justify-center px-5 py-1.5 mb-4 text-sm font-medium font-open rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
+            className="inline-flex items-center justify-center px-4 py-1 md:px-5 md:py-1.5 text-xs md:text-sm font-medium font-open rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <PiUserListDuotone className="w-5 h-5 mr-2" />
+            <PiUserListDuotone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Expert
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-extrabold font- mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 text-white">
             Work{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Experience
             </span>
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
-          <p className="mt-6 text-slate-300 text-xl max-w-2xl mx-auto">
+          <div className="h-1 w-16 md:w-20 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
+          <p className="mt-4 md:mt-6 text-base md:text-xl text-slate-300 max-w-2xl mx-auto px-4 md:px-0">
             My professional journey across various companies and projects
           </p>
         </motion.div>
@@ -148,7 +152,7 @@ export default function ExperienceSection() {
 
           {/* Experience content */}
           <motion.div
-            className="lg:col-span-8"
+            className="lg:col-span-8 bg-gradient-to-br from-slate-900/90 to-slate-950/90 backdrop-blur-sm rounded-xl border border-slate-700/30 p-4 md:p-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -167,11 +171,11 @@ export default function ExperienceSection() {
                   activeTab === index ? "block" : "hidden"
                 }`}
               >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                <div className="mb-4 md:mb-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-1 md:mb-2">
                     {exp.position}
                   </h3>
-                  <h4 className="text-lg font-bold font-open tracking-tight text-indigo-400 mb-4">
+                  <h4 className="text-lg md:text-xl font-bold font-open tracking-tight text-indigo-400 mb-3 md:mb-4">
                     {exp.company}
                   </h4>
 
@@ -213,8 +217,8 @@ export default function ExperienceSection() {
                 </div>
 
                 <div>
-                <h5 className="text-white font-semibold mb-3 flex items-center">
-                <PiStackDuotone className="h-5 w-5 mr-2 text-indigo-400" />
+                  <h5 className="text-white font-semibold mb-3 flex items-center">
+                    <PiStackDuotone className="h-5 w-5 mr-2 text-indigo-400" />
                     Technologies / Skills
                   </h5>
                   <div className="flex flex-wrap gap-2">
