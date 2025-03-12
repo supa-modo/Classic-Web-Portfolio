@@ -217,13 +217,13 @@ export default function HeroSection() {
 
             {/* CTA buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 pt-6"
+              className="flex gap-4 pt-3 md:pt-6"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.4, duration: 0.5 }}
             >
               <motion.button
-                className="group relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-slate-600 to-slate-800 text-white border-0 px-8 py-3 rounded-xl text-lg font-medium shadow-lg shadow-slate-700/20 transition-all duration-200  "
+                className="group relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-slate-600 to-slate-800 text-white border-0 px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base md:text-lg font-medium shadow-lg shadow-slate-700/20 transition-all duration-200  "
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -234,7 +234,7 @@ export default function HeroSection() {
                 <span className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.button>
               <motion.button
-                className="group relative overflow-hidden flex items-center justify-center bg-transparent border border-slate-700/30 text-slate-300 hover:text-white hover:border-slate-400/50 px-8 py-3 rounded-xl text-lg font-medium transition-all duration-500 hover:bg-slate-800/10 backdrop-blur-sm"
+                className="group relative overflow-hidden flex items-center justify-center bg-transparent border border-slate-700/30 text-slate-300 hover:text-white hover:border-slate-400/50 px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base md:text-lg font-medium transition-all duration-500 hover:bg-slate-800/10 backdrop-blur-sm"
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="relative z-10 flex items-center">
@@ -247,7 +247,7 @@ export default function HeroSection() {
 
             {/* Enhanced social links */}
             <motion.div
-              className="flex items-center gap-5 pt-4"
+              className="flex items-center gap-3 md:gap-5 pt-2 sm:pt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.6, duration: 0.5 }}
@@ -436,10 +436,10 @@ function EnhancedTechBadge({ icon, label, color, textColor }) {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${color} px-5 py-2 text-sm backdrop-blur-sm shadow-lg hover:shadow-lg hover:scale-105 transition-all duration-300 ${textColor} font-medium`}
+      className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${color} px-5 py-2 text-[0.8rem] sm:text-sm backdrop-blur-sm shadow-lg hover:shadow-lg hover:scale-105 transition-all duration-300 ${textColor} font-medium`}
     >
       {icon}
-      <span className="font-extrabold font-nunito">{label}</span>
+      <span className="font-bold font-open">{label}</span>
     </motion.div>
   );
 }
@@ -509,7 +509,7 @@ function EnhancedSocialLink({ href, icon }) {
   return (
     <motion.a
       href={href}
-      className="group flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-slate-800/90 to-slate-900/90 text-indigo-300 border border-indigo-500/20 hover:text-white hover:border-indigo-400/50 hover:from-indigo-500/20 hover:to-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-indigo-500/20"
+      className="group flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gradient-to-br from-slate-800/90 to-slate-900/90 text-indigo-300 border border-indigo-500/20 hover:text-white hover:border-indigo-400/50 hover:from-indigo-500/20 hover:to-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-indigo-500/20"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       transition={{

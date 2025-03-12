@@ -70,29 +70,29 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="space-y-5">
+            <div className="space-y-3 md:space-y-5">
               <div>
-                <div className="flex space-x-5 items-center">
-                  <div className="rounded-2xl overflow-hidden w-16 h-12">
+                <div className="flex space-x-3 md:space-x-5 items-center">
+                  <div className="rounded-xl md:rounded-2xl overflow-hidden w-12 h-9 md:w-16 md:h-12">
                     <img
                       src="/logo.gif"
                       alt="logo"
                       className="w-full h-full object-fit"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                     Eddy Ochieng Odhiambo
                   </h3>
                 </div>
 
-                <p className="mt-2 text-slate-400 max-w-md">
+                <p className="mt-1 md:mt-2 text-sm md:text-base text-slate-400 max-w-md">
                   Fullstack Developer passionate about crafting modern web and
                   mobile applications with clean code and exceptional user
                   experiences.
                 </p>
               </div>
 
-              <div className="space-y-3 text-sm">
+              <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
                 <div className="flex items-center gap-3  text-slate-300">
                   <TbMailFilled className="h-5 w-5 text-indigo-400" />
                   <a
@@ -117,7 +117,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-3 md:gap-4">
                 <SocialLink
                   href="#"
                   icon={<FaGithub className="h-5 w-5" />}
@@ -150,8 +150,10 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-3 md:mb-4">
+              Quick Links
+            </h4>
+            <ul className="space-y-2 md:space-y-3">
               <FooterLink href="#home" label="Home" />
               <FooterLink href="#skills" label="Skills" />
               <FooterLink href="#projects" label="Projects" />
@@ -168,9 +170,11 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-bold text-white mb-5">Contact Me</h4>
-            <div className="bg-gradient-to-br from-slate-900/90 to-slate-950/90 backdrop-blur-sm rounded-xl border border-slate-700/30 p-6 shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-4 md:mb-5">
+              Contact Me
+            </h4>
+            <div className="bg-gradient-to-br from-slate-900/90 to-slate-950/90 backdrop-blur-sm rounded-xl border border-slate-700/30 p-4 md:p-6 shadow-lg">
+              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <div className="relative w-full">
@@ -179,7 +183,7 @@ export default function Footer() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Your Name"
-                        className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
+                        className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm sm:text-base px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
                         required
                       />
                       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
@@ -191,7 +195,7 @@ export default function Footer() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Your Email"
-                        className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
+                        className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm sm:text-base px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
                         required
                       />
                       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
@@ -204,7 +208,7 @@ export default function Footer() {
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Your Message"
                       rows="3"
-                      className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all resize-none"
+                      className="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-3 text-sm sm:text-base text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all resize-none"
                       required
                     />
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />
@@ -214,7 +218,7 @@ export default function Footer() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg px-6 py-2.5 text-white font-medium hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg px-6 py-2.5 text-sm sm:text-base text-white font-medium hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
@@ -239,7 +243,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="mt-12 pt-4 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+        <div className="mt-8 md:mt-12 pt-3 md:pt-4 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-slate-400">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -294,7 +298,7 @@ function FooterLink({ href, label }) {
         href={href}
         className="text-slate-300 hover:text-indigo-300 transition-colors flex items-center gap-2"
       >
-        <ChevronRight className="h-4 w-4 text-indigo-400" />
+        <ChevronRight className="h-4 w-4 text-indigo-400 text-sm sm:text-base" />
         {label}
       </a>
     </motion.li>
@@ -306,7 +310,7 @@ function SocialLink({ href, icon, label }) {
     <motion.a
       href={href}
       aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800/70 text-indigo-300 border border-slate-700/50 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/20 transition-all duration-300"
+      className="flex sm:h-10 sm:w-10 h-9 w-9 items-center justify-center rounded-full bg-slate-800/70 text-indigo-300 border border-slate-700/50 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/20 transition-all duration-300"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >

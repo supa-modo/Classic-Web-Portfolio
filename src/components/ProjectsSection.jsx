@@ -142,10 +142,10 @@ export default function ProjectsSection() {
               </div>
 
               {/* Featured Project Info */}
-              <div className="p-8 md:p-12 flex flex-col justify-between">
+              <div className="p-4 sm:p-8 md:p-12 flex flex-col justify-between">
                 <div>
                   <motion.h3
-                    className="text-2xl md:text-3xl font-extrabold font-open tracking-tight text-indigo-300 mb-3"
+                    className="text-xl sm:text-2xl md:text-3xl font-extrabold font-open tracking-tight text-indigo-300 mb-3"
                     key={projects[activeProject].name}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ export default function ProjectsSection() {
                       href={projects[activeProject].githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2 text-sm font-medium font-nunito rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-slate-700/30 transition-all duration-300"
+                      className="flex items-center gap-2 sm:px-5 px-4 sm:py-2 py-1.5 text-sm font-medium font-nunito rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-slate-700/30 transition-all duration-300"
                     >
                       <FaGithub className="w-5 h-5" />
                       <span>Source Code</span>
@@ -205,7 +205,7 @@ export default function ProjectsSection() {
                       href={projects[activeProject].liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2 text-sm font-medium font-nunito rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white transition-all duration-300"
+                      className="flex items-center gap-2 sm:px-5 px-4 sm:py-2 py-1.5 text-sm font-medium font-nunito rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white transition-all duration-300"
                     >
                       <PiLinkDuotone className="w-5 h-5" />
                       <span>Live Demo</span>
