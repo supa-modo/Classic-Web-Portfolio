@@ -35,10 +35,10 @@ export default function SkillsSection() {
       skills: [
         { name: "React", level: 95 },
         { name: "Next.js", level: 90 },
-        { name: "TypeScript", level: 85 },
+        { name: "Javascript", level: 85 },
         { name: "Tailwind CSS", level: 95 },
         { name: "Framer Motion", level: 80 },
-        { name: "HTML/CSS", level: 98 },
+        { name: "Flutter", level: 98 },
       ],
     },
     {
@@ -50,9 +50,9 @@ export default function SkillsSection() {
       skills: [
         { name: "Node.js", level: 88 },
         { name: "Express", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "Django", level: 75 },
-        { name: "REST API", level: 90 },
+        { name: "Typescript", level: 80 },
+        { name: "Javascript", level: 75 },
+        { name: "REST APIs", level: 90 },
         { name: "GraphQL", level: 82 },
       ],
     },
@@ -63,11 +63,11 @@ export default function SkillsSection() {
       description: "Managing deployment, CI/CD, and infrastructure automation",
       skills: [
         { name: "Docker", level: 85 },
-        { name: "Git", level: 92 },
+        { name: "Azure CLI", level: 92 },
         { name: "GitHub Actions", level: 80 },
-        { name: "AWS", level: 78 },
+        { name: "Render", level: 78 },
         { name: "Vercel", level: 88 },
-        { name: "Netlify", level: 85 },
+        { name: "Railway", level: 85 },
       ],
     },
     {
@@ -76,12 +76,12 @@ export default function SkillsSection() {
       icon: <PiBrainDuotone className="w-6 h-6" />,
       description: "Leveraging data analytics and AI for intelligent solutions",
       skills: [
-        { name: "TensorFlow", level: 75 },
-        { name: "SQL", level: 88 },
+        { name: "PostgreSQL", level: 75 },
+        { name: "MsSQL", level: 88 },
         { name: "Data Visualization", level: 85 },
         { name: "MongoDB", level: 82 },
         { name: "Firebase", level: 85 },
-        { name: "Machine Learning", level: 72 },
+        { name: "Sequelize", level: 72 },
       ],
     },
   ];

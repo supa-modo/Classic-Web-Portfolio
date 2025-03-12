@@ -23,7 +23,7 @@ export default function HeroSection() {
     // Create particles
     if (particlesRef.current) {
       const container = particlesRef.current;
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 30; i++) {
         createParticle(container);
       }
     }
