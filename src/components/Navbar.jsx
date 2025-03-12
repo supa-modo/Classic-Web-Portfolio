@@ -111,7 +111,17 @@ export default function Navbar() {
                 )}
               </a>
             ))}
-            <button className="ml-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold font-poppins border-0 flex items-center gap-2 px-5 py-2 rounded-lg text-[0.84rem]">
+            <button
+              className="ml-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold font-poppins border-0 flex items-center gap-2 px-5 py-2 rounded-lg text-[0.84rem]"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/Eddy_Odhiambo_Resume.pdf";
+                link.download = "Eddy_Odhiambo_Resume.pdf"; // The name the file will be saved as
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <TbDownload className="h-4 w-4" />
               Resume/CV
             </button>
@@ -170,7 +180,17 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-2 pb-1">
-              <button className="w-full font-medium font-poppins bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0 flex items-center justify-center gap-1 px-3 py-1.5 rounded-md text-[0.8rem]">
+              <button
+                className="w-full font-medium font-poppins bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0 flex items-center justify-center gap-1 px-3 py-1.5 rounded-md text-[0.8rem]"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/resume.pdf";
+                  link.download = "Eddy_Odhiambo_Resume.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <TbDownload className="h-5 w-5" />
                 Resume/CV
               </button>

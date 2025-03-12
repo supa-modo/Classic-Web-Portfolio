@@ -119,24 +119,24 @@ export default function Footer() {
 
               <div className="flex gap-3 md:gap-4">
                 <SocialLink
-                  href="#"
+                  href="https://github.com/supa-modo"
                   icon={<FaGithub className="h-5 w-5" />}
                   label="GitHub"
                 />
                 <SocialLink
-                  href="#"
+                  href="https://www.linkedin.com/in/eddy-o-odhiambo"
                   icon={<FaLinkedin className="h-5 w-5" />}
                   label="LinkedIn"
                 />
                 <SocialLink
-                  href="#"
+                  href="https://x.com/eddieoochieng"
                   icon={<FaSquareXTwitter className="h-5 w-5" />}
                   label="Twitter"
                 />
                 <SocialLink
-                  href="#"
+                  href="https://wa.me/254790193402"
                   icon={<FaWhatsapp className="h-5 w-5" />}
-                  label="Instagram"
+                  label="WhatsApp"
                 />
               </div>
             </div>
@@ -309,6 +309,8 @@ function SocialLink({ href, icon, label }) {
   return (
     <motion.a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
       className="flex sm:h-10 sm:w-10 h-9 w-9 items-center justify-center rounded-full bg-slate-800/70 text-indigo-300 border border-slate-700/50 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/20 transition-all duration-300"
       whileHover={{ scale: 1.1 }}

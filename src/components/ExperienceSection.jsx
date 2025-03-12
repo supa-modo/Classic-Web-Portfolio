@@ -22,46 +22,66 @@ export default function ExperienceSection() {
   // Example experience data - replace with your actual experience
   const experiences = [
     {
-      company: "TechCorp Solutions",
-      position: "Senior Frontend Developer",
-      duration: "Jan 2023 - Present",
-      location: "Nairobi, Kenya",
+      company: "African Court on Human & Peoples Rights",
+      position: "IT Specialist [Intern]",
+      duration: "September 2024 - December 2024",
+      location: "Arusha, Tanzania",
       description:
-        "Leading frontend development for enterprise applications using React and TypeScript. Improved application performance by 40% through code optimization and modern state management techniques.",
+        "Responsible for the maintenance and support of the organization's IT infrastructure, including servers, networks, and desktop systems. Also involved in the implementation of new IT projects and policies.",
       achievements: [
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Mentored junior developers and established best practices for the team",
-        "Developed reusable component library used across multiple projects",
+        "Assisted in the setup and configuration of new IT equipment and systems",
+        "Provided technical support to users and resolved IT issues",
+        "Participated in the development of the Court's Knowledge Management System",
       ],
-      technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
+      technologies: [
+        "SAP",
+        "Active Directory",
+        "Server Management",
+        "React",
+        "Express",
+        "JavaScript",
+        "Network Maintenance",
+        "Node.js",
+        "PostgreSQL",
+        "Video & Multi-Language Audio Conferencing",
+      ],
     },
     {
-      company: "Innovate Digital",
-      position: "Full Stack Developer",
-      duration: "Mar 2021 - Dec 2022",
-      location: "Remote",
+      company: "East African Community Secretariat",
+      position: "IT Technical Officer",
+      duration: "July 2023 - August 2024",
+      location: "Arusha, Tanzania",
       description:
-        "Designed and developed full-stack web applications for clients in finance and healthcare sectors. Focused on responsive design and accessibility compliance.",
+        "Responsible for the maintenance and support of the organization's IT infrastructure, including servers, networks, and desktop systems.",
       achievements: [
-        "Created an appointment scheduling system that increased client bookings by 35%",
-        "Integrated payment gateways and reduced transaction failures by 25%",
-        "Developed custom dashboards for data visualization",
+        "Created a meeting attandance signing system to ease the process of signing meeting attandance and move from paper based system.",
+        "Responsible for the maintenance and support of the organization's IT infrastructure, including servers, networks, and desktop systems.",
+        "Provided technical support in setup of conference room for both virtual and physical meetings.",
       ],
-      technologies: ["JavaScript", "Node.js", "MongoDB", "Express", "React"],
+      technologies: [
+        "Active Directory",
+        "Server Management",
+        "Network Maintenance",
+        "JavaScript",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "React",
+      ],
     },
     {
       company: "MobileTech Labs",
-      position: "Mobile App Developer",
-      duration: "Jun 2019 - Feb 2021",
+      position: "Mobile App Developer Intern",
+      duration: "April 2023 - June 2023",
       location: "Nairobi, Kenya",
       description:
         "Specialized in cross-platform mobile app development using Flutter. Worked on consumer-facing applications with complex state management and API integrations.",
       achievements: [
-        "Launched 5 successful mobile applications with a combined 100K+ downloads",
+        "Launched a successful mobile application with a combined 100K+ downloads",
         "Reduced app load time by 50% through optimization and caching strategies",
         "Integrated biometric authentication enhancing app security",
       ],
-      technologies: ["Flutter", "Dart", "Firebase", "RESTful APIs", "SQLite"],
+      technologies: ["Flutter", "Dart", "Firebase", "Javascript", "RESTful APIs"],
     },
   ];
 
@@ -94,7 +114,7 @@ export default function ExperienceSection() {
             <PiUserListDuotone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Expert
           </motion.div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 text-white">
+          <h2 className="text-3xl mt-2 md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 text-white">
             Work{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Experience

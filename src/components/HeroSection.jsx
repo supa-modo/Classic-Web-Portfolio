@@ -1,15 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Code,
-  Database,
-  Globe,
-  Layers,
-  Sparkles,
-  ExternalLink,
-  ChevronDown,
-} from "lucide-react";
+import { ArrowRight, Database, ExternalLink } from "lucide-react";
 import { PiCodeBold, PiCodeDuotone, PiFileCSharpDuotone } from "react-icons/pi";
 import { FaFlutter, FaReact } from "react-icons/fa6";
 
@@ -18,15 +9,35 @@ export default function HeroSection() {
   const particlesRef = useRef(null);
 
   useEffect(() => {
-    setMounted(true);
+    const createParticles = () => {
+      try {
+        if (particlesRef.current) {
+          const container = particlesRef.current;
+          container.innerHTML = "";
 
-    // Create particles
-    if (particlesRef.current) {
-      const container = particlesRef.current;
-      for (let i = 0; i < 30; i++) {
-        createParticle(container);
+          for (let i = 0; i < 30; i++) {
+            createParticle(container);
+          }
+          console.log("Particles created successfully");
+        } else {
+          console.warn("Particles container not found");
+        }
+      } catch (error) {
+        console.error("Error creating particles:", error);
       }
-    }
+    };
+
+    const frameId = requestAnimationFrame(() => {
+      setMounted(true);
+      createParticles();
+    });
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      if (particlesRef.current) {
+        particlesRef.current.innerHTML = "";
+      }
+    };
   }, []);
 
   const createParticle = (container) => {
@@ -87,7 +98,11 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Particles container */}
-      <div ref={particlesRef} className="absolute inset-0 overflow-hidden">
+      <div
+        ref={particlesRef}
+        className="absolute inset-0 overflow-visible z-0"
+        style={{ pointerEvents: "none" }}
+      >
         {/* Particles will be added here dynamically */}
       </div>
 
@@ -140,7 +155,17 @@ export default function HeroSection() {
                       gradient="from-indigo-400 via-indigo-100 to-slate-500"
                     />
                   </span>
-                  <span className="animate-pulse text-indigo-300">|</span>
+                  <motion.span
+                    className="animate-pulse text-indigo-300"
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{
+                      repeat: Number.POSITIVE_INFINITY,
+                      duration: 1,
+                    }}
+                  >
+                    |
+                  </motion.span>
+                  {/* Blinking cursor */}
                 </div>
               </motion.h1>
 
@@ -148,7 +173,7 @@ export default function HeroSection() {
                 className="h-1.5 w-24 bg-gradient-to-r from-indigo-500 via-blue-400 to-slate-300 rounded-full shadow-lg shadow-slate-500/10"
                 initial={{ width: 0 }}
                 animate={{ width: 96 }}
-                transition={{ delay: 1.8, duration: 0.5 }}
+                transition={{ delay: 1.4, duration: 0.5 }}
               />
             </div>
 
@@ -236,6 +261,11 @@ export default function HeroSection() {
               <motion.button
                 className="group relative overflow-hidden flex items-center justify-center bg-transparent border border-slate-700/30 text-slate-300 hover:text-white hover:border-slate-400/50 px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base md:text-lg font-medium transition-all duration-500 hover:bg-slate-800/10 backdrop-blur-sm"
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 <span className="relative z-10 flex items-center">
                   Contact Me
@@ -252,10 +282,22 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 2.6, duration: 0.5 }}
             >
-              <EnhancedSocialLink href="#" icon="github" />
-              <EnhancedSocialLink href="#" icon="linkedin" />
-              <EnhancedSocialLink href="#" icon="whatsapp" />
-              <EnhancedSocialLink href="#" icon="email" />
+              <EnhancedSocialLink
+                href="https://github.com/supa-modo"
+                icon="github"
+              />
+              <EnhancedSocialLink
+                href="https://www.linkedin.com/in/eddy-o-odhiambo"
+                icon="linkedin"
+              />
+              <EnhancedSocialLink
+                href="https://wa.me/254790193402"
+                icon="whatsapp"
+              />
+              <EnhancedSocialLink
+                href="mailto:eddieodhiambo11@gmail.com"
+                icon="email"
+              />
             </motion.div>
           </motion.div>
 
@@ -509,6 +551,8 @@ function EnhancedSocialLink({ href, icon }) {
   return (
     <motion.a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-gradient-to-br from-slate-800/90 to-slate-900/90 text-indigo-300 border border-indigo-500/20 hover:text-white hover:border-indigo-400/50 hover:from-indigo-500/20 hover:to-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-indigo-500/20"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
