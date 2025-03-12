@@ -80,6 +80,21 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (window.location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      document
+                        .getElementById(item.href.substring(1))
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }, 100); // Small delay to allow page transition
+                  } else {
+                    document
+                      .getElementById(item.href.substring(1))
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className={`px-3 py-2 text-[0.92rem] font-bold font-open transition-colors relative ${
                   activeSection === item.href.substring(1)
                     ? "text-white"
@@ -129,12 +144,27 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileMenuOpen(false);
+                  if (window.location.pathname !== "/") {
+                    navigate("/");
+                    setTimeout(() => {
+                      document
+                        .getElementById(item.href.substring(1))
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
+                  } else {
+                    document
+                      .getElementById(item.href.substring(1))
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className={`block px-3 py-2 text-base font-medium ${
                   activeSection === item.href.substring(1)
                     ? "text-white bg-indigo-500/10 rounded-md"
                     : "text-indigo-200/70 hover:text-white"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </a>

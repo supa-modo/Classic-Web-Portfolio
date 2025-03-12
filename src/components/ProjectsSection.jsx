@@ -258,41 +258,45 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Project content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <span className="text-xs font-medium font-open bg-indigo-500/20 text-indigo-200 px-3 py-1 rounded-xl w-fit mb-4 backdrop-blur-sm border border-indigo-500/20">
-                    {project.tags[0]}
-                  </span>
+                <div className="absolute inset-0 flex flex-col justify-between p-2 sm:p-4 md:p-5">
+                  <div className="flex items-center justify-between mb-4">
+                    {/* Project tag */}
+                    <span className="text-xs font-medium font-open bg-indigo-500/20 text-indigo-200 px-3 py-1 rounded-xl w-fit backdrop-blur-sm border border-indigo-500/20">
+                      {project.tags[0]}
+                    </span>
+                    {/* Project links */}
+                    <div className="flex gap-3 mt-auto">
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800/80 backdrop-blur-sm text-white hover:bg-indigo-500/30 hover:text-white transition-all duration-300 border border-slate-700/30"
+                        >
+                          <FaGithub className="w-5 h-5" />
+                        </a>
+                      )}
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800/80 backdrop-blur-sm text-white hover:bg-indigo-500/30 hover:text-white transition-all duration-300 border border-slate-700/30"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
 
-                  <h3 className="text-xl font-bold font-open tracking-tight text-white mb-2 group-hover:text-indigo-200 transition-colors">
-                    {project.name}
-                  </h3>
-
-                  <p className="text-sm text-slate-300 mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  {/* Project links */}
-                  <div className="flex gap-3 mt-auto">
-                    {project.githubLink && (
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800/80 backdrop-blur-sm text-white hover:bg-indigo-500/30 hover:text-white transition-all duration-300 border border-slate-700/30"
-                      >
-                        <FaGithub className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.liveLink && (
-                      <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800/80 backdrop-blur-sm text-white hover:bg-indigo-500/30 hover:text-white transition-all duration-300 border border-slate-700/30"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
+                  {/* Project title and description container */}
+                  <div className="bg-slate-900/20 backdrop-blur-sm p-4 rounded-xl border border-slate-700/30">
+                    <h3 className="text-base sm:text-lg font-bold font-open tracking-tight line-clamp-1 text-white mb-2 group-hover:text-indigo-200 transition-colors">
+                      {project.name}
+                    </h3>
+                    <p className="text-sm text-slate-300 line-clamp-2">
+                      {project.description}
+                    </p>
                   </div>
 
                   {/* Hover effect */}
