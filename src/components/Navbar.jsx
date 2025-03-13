@@ -184,7 +184,7 @@ export default function Navbar() {
                 className="w-full font-medium font-poppins bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-0 flex items-center justify-center gap-1 px-3 py-1.5 rounded-md text-[0.8rem]"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/resume.pdf";
+                  link.href = "/Eddy_Odhiambo_Resume.pdf";
                   link.download = "Eddy_Odhiambo_Resume.pdf";
                   document.body.appendChild(link);
                   link.click();

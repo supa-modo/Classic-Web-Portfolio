@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Database, ExternalLink } from "lucide-react";
 import { PiCodeBold, PiCodeDuotone, PiFileCSharpDuotone } from "react-icons/pi";
 import { FaFlutter, FaReact } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
   const particlesRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const createParticles = () => {
@@ -251,6 +253,9 @@ export default function HeroSection() {
                 className="group relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-slate-600 to-slate-800 text-white border-0 px-6 sm:px-8 py-3 rounded-xl text-sm sm:text-base md:text-lg font-medium shadow-lg shadow-slate-700/20 transition-all duration-200  "
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  navigate("/projects");
+                }}
               >
                 <span className="relative z-10 flex items-center">
                   View Projects

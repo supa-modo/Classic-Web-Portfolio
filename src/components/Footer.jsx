@@ -1,17 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  ArrowUp,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-  ChevronRight,
-} from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { ArrowUp, ChevronRight } from "lucide-react";
 import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { PiMapPinAreaDuotone, PiPhoneListDuotone } from "react-icons/pi";
@@ -23,24 +13,51 @@ export default function Footer() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const formRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(false);
+    setErrorMessage("");
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setName("");
-      setEmail("");
-      setMessage("");
+    // template parameters
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+      to_name: "Eddy Odhiambo",
+    };
 
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 3000);
-    }, 1500);
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "default_service", // Default service ID
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+
+        // Reset success message after 3 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Email sending failed:", error);
+        setIsSubmitting(false);
+        setSubmitError(true);
+        setErrorMessage("Failed to send message. Please try again later.");
+      });
   };
 
   const scrollToTop = () => {
@@ -174,7 +191,11 @@ export default function Footer() {
               Contact Me
             </h4>
             <div className="bg-gradient-to-br from-slate-900/90 to-slate-950/90 backdrop-blur-sm rounded-xl border border-slate-700/30 p-4 md:p-6 shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="space-y-3 md:space-y-4"
+              >
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <div className="relative w-full">
@@ -236,6 +257,16 @@ export default function Footer() {
                     className="text-green-400 text-sm text-center"
                   >
                     Message sent successfully!
+                  </motion.p>
+                )}
+
+                {submitError && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-400 text-sm text-center"
+                  >
+                    {errorMessage}
                   </motion.p>
                 )}
               </form>

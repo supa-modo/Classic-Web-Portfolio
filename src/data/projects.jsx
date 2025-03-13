@@ -62,6 +62,22 @@ import elite6 from "../assets/images/elite-fitness/elite6.png";
 import elite7 from "../assets/images/elite-fitness/elite7.png";
 import elite8 from "../assets/images/elite-fitness/elite8.png";
 import elite9 from "../assets/images/elite-fitness/elite9.png";
+import elite10 from "../assets/images/elite-fitness/elite10.png";
+import elite11 from "../assets/images/elite-fitness/elite11.png";
+import elite12 from "../assets/images/elite-fitness/elite12.png";
+import elite13 from "../assets/images/elite-fitness/elite13.png";
+import elite14 from "../assets/images/elite-fitness/elite14.png";
+import elite15 from "../assets/images/elite-fitness/elite15.png";
+import elite16 from "../assets/images/elite-fitness/elite16.png";
+import elite17 from "../assets/images/elite-fitness/elite17.png";
+import elite18 from "../assets/images/elite-fitness/elite18.png";
+import elite19 from "../assets/images/elite-fitness/elite19.png";
+import elite20 from "../assets/images/elite-fitness/elite20.png";
+import elite21 from "../assets/images/elite-fitness/elite21.png";
+import elite22 from "../assets/images/elite-fitness/elite22.png";
+import elite23 from "../assets/images/elite-fitness/elite23.png";
+import elite24 from "../assets/images/elite-fitness/elite24.png";
+import elite25 from "../assets/images/elite-fitness/elite25.png";
 
 // Import images for Ilala College project
 import ilala1 from "../assets/images/ilalaCollege/ilala1.png";
@@ -238,11 +254,27 @@ const projectImages = {
     elite2,
     elite3,
     elite4,
+    elite10,
+    elite11,
+    elite12,
+    elite13,
+    elite14,
+    elite15,
     elite5,
     elite6,
     elite7,
     elite8,
     elite9,
+    elite16,
+    elite17,
+    elite18,
+    elite19,
+    elite20,
+    elite21,
+    elite22,
+    elite23,
+    elite24,
+    elite25,
   ],
   msafiri: [msafiri1, msafiri2, msafiri3],
   farm: [farm1, farm2, farm3, farm4, farm5, farm6, farm7, farm8, farm9, farm10],
@@ -306,7 +338,15 @@ export const projects = [
     name: "HR Recruitment System",
     description:
       "A comprehensive HR platform for managing job postings, candidate applications, interview scheduling, and hiring processes. Features include applicant tracking, resume parsing, and team collaboration tools.",
-    tags: ["React", "Javascript", "Tailwindcss", "Node.js", "Express", "MongoDB", "Redis"],
+    tags: [
+      "React",
+      "Javascript",
+      "Tailwindcss",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redis",
+    ],
     images: projectImages.jobs,
     githubLink: "https://github.com/supa-modo/job-portal-frontend",
     liveLink: "https://recruitment-portal-eight.vercel.app/",
@@ -315,7 +355,16 @@ export const projects = [
     name: "Gym Website & Admin Mngt Console",
     description:
       "A fullstack website for a gym to showcase their services and receive enquiries and communications with potential clients. Site showcases their gym facilities, pricing and classes, it also has a store section for users to purchase gym products and also a complete Admin management interface with a custom CMS for the store among many other features.",
-    tags: ["React", "TailwindCss", "Javascript", "Framer Motion", "Typescript", "Express", "PostgreSQL", "Sequelize"],
+    tags: [
+      "React",
+      "TailwindCss",
+      "Javascript",
+      "Framer Motion",
+      "Typescript",
+      "Express",
+      "PostgreSQL",
+      "Sequelize",
+    ],
     images: projectImages.elite,
     githubLink: "https://github.com/supa-modo/gym-website",
     liveLink: "https://elite-fitness-zeta.vercel.app/",
@@ -324,17 +373,26 @@ export const projects = [
     name: "Private Jet Charter Site",
     description:
       "A static webapp for a private jet charter company to showcase their services and receive enquiries and communications with potential clients. Site showcases their jet fleet along with priccing and amenities among more other features.",
-    tags: ["React", "Javascript",  "TailwindCss", "Framer Motion"],
+    tags: ["React", "Javascript", "TailwindCss", "Framer Motion"],
     images: projectImages.hslive,
     githubLink: "https://github.com/supa-modo/HsLive-Bookings",
     liveLink: "https://www.shineluxuryprivatejets.com/",
   },
-  
+
   {
     name: "Staff Welfare Loans & Savings",
     description:
       "A demonstration of a full-stack web platform with features for managing, creating, editing loan applications and keeping track of member account savings records and interest accrued for staff members part of a welfare program in an organization.",
-    tags: ["React", "TailwindCss", "Node.js", "Javascript", "Express", "PostgreSql", "Sequelize", "WebSockets"],
+    tags: [
+      "React",
+      "TailwindCss",
+      "Node.js",
+      "Javascript",
+      "Express",
+      "PostgreSql",
+      "Sequelize",
+      "WebSockets",
+    ],
     images: projectImages.welfare,
     githubLink: "https://github.com/supa-modo/Sacco-Welfare-Loans-and-Savings",
     liveLink: "https://sacco-welfare-loans-and-savings.vercel.app/",
