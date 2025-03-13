@@ -258,11 +258,11 @@ export default function SkillsSection() {
                   initial="hidden"
                   animate="visible"
                 >
-                  {activeCategoryData.skills.map((skill) => (
+                  {activeCategoryData.skills.map((skill, index) => (
                     <motion.div
                       key={skill.name}
                       variants={itemVariants}
-                      className="group"
+                      className="group relative"
                     >
                       <div className="flex justify-between items-center mb-2">
                         <h4 className="text-white text-sm md:text-[0.95rem] font-bold font-nunito">
@@ -281,9 +281,25 @@ export default function SkillsSection() {
                         />
                       </div>
 
-                      {/* Skill info box that appears on hover */}
-                      <div className="mt-2 hidden group-hover:block transition-all duration-300">
-                        <div className="p-2 bg-slate-800 rounded-md text-xs text-slate-300">
+                      {/*  skill info box overlay with edge detection */}
+                      <div
+                        className={`absolute ${
+                          index % 2 === 0 ? "left-0" : "right-0"
+                        } top-full mt-2 w-full max-w-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-20 transform group-hover:translate-y-1 pointer-events-none`}
+                        style={{
+                          transitionProperty: "opacity, visibility, transform",
+                          transitionTimingFunction:
+                            "cubic-bezier(0.4, 0, 0.2, 1)",
+                        }}
+                      >
+                        <div className="p-3 bg-slate-800/95 backdrop-blur-sm rounded-md text-xs text-slate-300 shadow-lg border border-slate-700/50 relative">
+                          {/* Small arrow pointing to the skill */}
+                          <div
+                            className={`absolute -top-2 ${
+                              index % 2 === 0 ? "left-6" : "right-6"
+                            } w-0 h-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-slate-800/95`}
+                          ></div>
+
                           {skill.level >= 90
                             ? "Expert level proficiency with deep knowledge"
                             : skill.level >= 80
