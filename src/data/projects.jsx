@@ -35,6 +35,21 @@ import farm7 from "../assets/images/flutter-farm/farm7.jpg";
 import farm8 from "../assets/images/flutter-farm/farm8.jpg";
 import farm9 from "../assets/images/flutter-farm/farm9.jpg";
 import farm10 from "../assets/images/flutter-farm/farm10.jpg";
+
+// Import images for lako project
+import lako1 from "../assets/images/lako/lako1.png";
+import lako2 from "../assets/images/lako/lako2.png";
+import lako3 from "../assets/images/lako/lako3.png";
+import lako4 from "../assets/images/lako/lako4.png";
+import lako5 from "../assets/images/lako/lako5.png";
+import lako6 from "../assets/images/lako/lako6.png";
+import lako7 from "../assets/images/lako/lako7.png";
+import lako8 from "../assets/images/lako/lako8.png";
+import lako9 from "../assets/images/lako/lako9.png";
+import lako10 from "../assets/images/lako/lako10.png";
+import lako11 from "../assets/images/lako/lako11.png";
+import lako12 from "../assets/images/lako/lako12.png";
+
 // Import images for eSoko project
 import esoko1 from "../assets/images/esoko/esoko1.png";
 import esoko2 from "../assets/images/esoko/esoko2.png";
@@ -247,6 +262,7 @@ const projectImages = {
     kms11,
     kms12,
   ],
+  lako: [lako1, lako2, lako3, lako4, lako5, lako6, lako7, lako8, lako9, lako10, lako11, lako12],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6, eac7, eac8, eac9, eac10],
   jobs: [jobs1, jobs02, jobs2, jobs3, jobs4, jobs5, jobs6, jobs7, jobs8, jobs9],
   elite: [
@@ -334,6 +350,15 @@ const projectImages = {
 };
 
 export const projects = [
+  {
+    name: "Lako",
+    description:
+      "A full-stack web application for managing and comparing insurance plans and quotes for clients, processing and tracking leads, and managing client relationships. Features include a dashboard for managing leads, an AI powered recommendation engine for insurance plan quotes, and a CMS for managing the website.",
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "Typescript"],
+    images: projectImages.lako,
+    githubLink: "https://github.com/supa-modo/lakoInsurance",
+    liveLink: "https://lako-insurance-client.vercel.app/",
+  },
   {
     name: "HR Recruitment System",
     description:

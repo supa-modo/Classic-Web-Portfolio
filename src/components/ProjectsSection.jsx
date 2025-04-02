@@ -205,7 +205,7 @@ export default function ProjectsSection() {
                       href={projects[activeProject].liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 sm:px-5 px-4 sm:py-2 py-1.5 text-sm font-medium font-nunito rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white transition-all duration-300"
+                      className="flex items-center gap-2 md:px-6 sm:px-5 px-4 sm:py-2 py-1.5 text-sm font-medium font-nunito rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white transition-all duration-300"
                     >
                       <PiLinkDuotone className="w-5 h-5" />
                       <span>Live Demo</span>
@@ -250,7 +250,7 @@ export default function ProjectsSection() {
                 {/* Project background with gradient overlay */}
                 <div className="absolute inset-0">
                   <img
-                    src={project.images[2]}
+                    src={project.images[4]}
                     alt={project.name}
                     className="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-700 ease-in-out"
                   />
