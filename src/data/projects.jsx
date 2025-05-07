@@ -199,6 +199,36 @@ import welfare19 from "../assets/images/welfare/welfare19.png";
 import welfare20 from "../assets/images/welfare/welfare20.png";
 import welfare21 from "../assets/images/welfare/welfare21.png";
 
+//import for teflex leather project
+import teflex1 from "../assets/images/teflex/teflex1.png";
+import teflex2 from "../assets/images/teflex/teflex2.png";
+import teflex3 from "../assets/images/teflex/teflex3.png";
+import teflex4 from "../assets/images/teflex/teflex4.png";
+import teflex5 from "../assets/images/teflex/teflex5.png";
+import teflex6 from "../assets/images/teflex/teflex6.png";
+import teflex7 from "../assets/images/teflex/teflex7.png";
+import teflex8 from "../assets/images/teflex/teflex8.png";
+import teflex9 from "../assets/images/teflex/teflex9.png";
+import teflex10 from "../assets/images/teflex/teflex10.png";
+import teflex11 from "../assets/images/teflex/teflex11.png";
+import teflex12 from "../assets/images/teflex/teflex12.png";
+import teflex13 from "../assets/images/teflex/teflex13.png";
+import teflex14 from "../assets/images/teflex/teflex14.png";
+
+//import for financeFlow project
+import financeFlow1 from "../assets/images/financeFlow/fin3.png";
+import financeFlow2 from "../assets/images/financeFlow/fin2.png";
+import financeFlow3 from "../assets/images/financeFlow/fin1.png";
+import financeFlow4 from "../assets/images/financeFlow/fin4.png";
+import financeFlow5 from "../assets/images/financeFlow/fin5.png";
+import financeFlow6 from "../assets/images/financeFlow/fin6.png";
+import financeFlow7 from "../assets/images/financeFlow/fin7.png";
+import financeFlow8 from "../assets/images/financeFlow/fin8.png";
+import financeFlow9 from "../assets/images/financeFlow/fin9.png";
+import financeFlow10 from "../assets/images/financeFlow/fin10.png";
+import financeFlow11 from "../assets/images/financeFlow/fin11.png";
+import financeFlow12 from "../assets/images/financeFlow/fin12.png";
+
 // Project data structure
 const projectImages = {
   esoko: [
@@ -347,9 +377,60 @@ const projectImages = {
     welfare20,
     welfare21,
   ],
+
+  financeFlow: [
+    financeFlow1,
+    financeFlow2,
+    financeFlow3,
+    financeFlow4,
+    financeFlow5,
+    financeFlow6,
+    financeFlow7,
+    financeFlow8,
+    financeFlow9,
+    financeFlow10,
+    financeFlow11,
+    financeFlow12,
+  ],
+
+  teflex: [
+    teflex1,
+    teflex2,
+    teflex3,
+    teflex4,
+    teflex5,
+    teflex6,
+    teflex7,
+    teflex8,
+    teflex9,
+    teflex10,
+    teflex11,
+    teflex12,
+    teflex13,
+    teflex14,
+  ],  
 };
 
 export const projects = [
+  {
+    name: "TeFlex Leather Africa",
+    description:
+      "A landing page for Teflex Leather Gem Africa's company for their clients to interact and explore their brand and services, order custom bespoke leather designs and accessories and many more.",
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "Typescript"],
+    images: projectImages.teflex,
+    githubLink: "https://github.com/supa-modo/Teflex-Leather",
+    liveLink: "https://teflex-leather.vercel.app/",
+  },
+  {
+    name: "FinanceFlow",
+    description:
+      "A full-stack web application for managing and tracking one's personal finances and assets. Showing you trends of financial growth and journey over time with AI powered recommendations on progress.",
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "Typescript"],
+    images: projectImages.financeFlow,
+    githubLink: "https://github.com/supa-modo/Personal-FInance-Tracker-client",
+    liveLink: "https://personal-finance-tracker-eight-green.vercel.app/",
+  },
+  
   {
     name: "Lako",
     description:
