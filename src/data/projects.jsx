@@ -13,6 +13,15 @@ import eac10 from "../assets/images/eac/eac10.png";
 import msafiri1 from "../assets/images/msafiri/msafiri1.jpg";
 import msafiri2 from "../assets/images/msafiri/msafiri2.jpg";
 import msafiri3 from "../assets/images/msafiri/msafiri3.jpg";
+
+//Import images from digiplot project
+import digiplot1 from "../assets/images/digiplot/digiplot1.png"
+import digiplot2 from "../assets/images/digiplot/digiplot2.png"
+import digiplot3 from "../assets/images/digiplot/digiplot3.png"
+import digiplot4 from "../assets/images/digiplot/digiplot4.png"
+import digiplot5 from "../assets/images/digiplot/digiplot5.png"
+
+
 // Import images for recruitment project
 import jobs1 from "../assets/images/jobs/jobs1.png";
 import jobs2 from "../assets/images/jobs/jobs2.png";
@@ -292,6 +301,7 @@ const projectImages = {
     kms11,
     kms12,
   ],
+  digiplot: [digiplot1, digiplot2, digiplot3, digiplot4, digiplot5],
   lako: [lako1, lako2, lako3, lako4, lako5, lako6, lako7, lako8, lako9, lako10, lako11, lako12],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6, eac7, eac8, eac9, eac10],
   jobs: [jobs1, jobs02, jobs2, jobs3, jobs4, jobs5, jobs6, jobs7, jobs8, jobs9],
@@ -412,6 +422,15 @@ const projectImages = {
 };
 
 export const projects = [
+  {
+    name: "Digiplot Property Management",
+    description:
+      "This is a fullstack web application for landlords and tenants to manage their properties and tenants. and track their rental payments, maintenace requests, and many more. ",
+    tags: ["React", "Node.js", "Express", "PostgreSQL", "Typescript"],
+    images: projectImages.digiplot,
+    githubLink: "https://github.com/supa-modo/digiplot",
+    liveLink: "https://digiplot.vercel.app/",
+  },
   {
     name: "TeFlex Leather Africa",
     description:
