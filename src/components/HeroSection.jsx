@@ -300,7 +300,7 @@ export default function HeroSection() {
                 icon="whatsapp"
               />
               <EnhancedSocialLink
-                href="mailto:eddieodhiambo11@gmail.com"
+                href="mailto:eddie.oodhiambo@gmail.com"
                 icon="email"
               />
             </motion.div>

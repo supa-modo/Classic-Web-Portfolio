@@ -116,7 +116,7 @@ export default function Footer() {
                     href="mailto:eddy@example.com"
                     className="hover:text-indigo-300 transition-colors hover:underline underline-offset-4"
                   >
-                    eddyodhiambo11@gmail.com
+                    eddie.oodhiambo@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">

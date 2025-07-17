@@ -13,6 +13,7 @@ import {
   PiUserListDuotone,
 } from "react-icons/pi";
 import { TbBriefcaseFilled, TbCalendarDot } from "react-icons/tb";
+import { RiUserStarLine } from "react-icons/ri";
 
 export default function ExperienceSection() {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,6 +22,52 @@ export default function ExperienceSection() {
 
   // Example experience data - replace with your actual experience
   const experiences = [
+    {
+      company: "Freelance",
+      position: "Software Developer",
+      duration: "December 2024 - Present",
+      location: "Nairobi, Kenya",
+      description:
+        "Working as a freelance software developer, delivering custom software solutions for various clients across different industries.",
+      achievements: [
+        "Developed and deployed multiple web applications for diverse client requirements",
+        "Implemented responsive designs and modern UI/UX practices",
+        "Provided ongoing maintenance and support for client applications",
+      ],
+      technologies: [
+        "React",
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Git",
+        "RESTful APIs",
+      ],
+    },
+    {
+      company: "Kenya Revenue Authority (KRA)",
+      position: "ADR Intern",
+      duration: "June 2025 - Present",
+      location: "Nairobi, Kenya",
+      description:
+        "Working as an ADR (Alternative Dispute Resolution) intern at the Kenya Revenue Authority, assisting in tax dispute resolution processes.",
+      achievements: [
+        "Assisted in the resolution of tax disputes through alternative dispute resolution methods",
+        "Conducted research and analysis on tax-related cases",
+        "Supported the ADR team in case management and documentation",
+      ],
+      technologies: [
+        "Legal Research",
+        "Case Management",
+        "Documentation",
+        "Tax Law",
+        "Dispute Resolution",
+        "Microsoft Office",
+      ],
+    },
     {
       company: "African Court on Human & Peoples Rights",
       position: "IT Specialist [Intern]",
@@ -81,7 +128,13 @@ export default function ExperienceSection() {
         "Reduced app load time by 50% through optimization and caching strategies",
         "Integrated biometric authentication enhancing app security",
       ],
-      technologies: ["Flutter", "Dart", "Firebase", "Javascript", "RESTful APIs"],
+      technologies: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Javascript",
+        "RESTful APIs",
+      ],
     },
   ];
 
@@ -111,8 +164,8 @@ export default function ExperienceSection() {
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <PiUserListDuotone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-            Expert
+            <RiUserStarLine className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+            Work History
           </motion.div>
           <h2 className="text-3xl mt-2 md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 text-white">
             Work{" "}
