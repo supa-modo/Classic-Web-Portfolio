@@ -113,7 +113,7 @@ export default function Footer() {
                 <div className="flex items-center gap-3  text-slate-300">
                   <TbMailFilled className="h-5 w-5 text-indigo-400" />
                   <a
-                    href="mailto:eddy@example.com"
+                    href="mailto:eddie.oodhiambo@gmail.com"
                     className="hover:text-indigo-300 transition-colors hover:underline underline-offset-4"
                   >
                     eddie.oodhiambo@gmail.com
