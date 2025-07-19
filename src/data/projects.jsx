@@ -15,12 +15,18 @@ import msafiri2 from "../assets/images/msafiri/msafiri2.jpg";
 import msafiri3 from "../assets/images/msafiri/msafiri3.jpg";
 
 //Import images from digiplot project
-import digiplot1 from "../assets/images/digiplot/digiplot1.png"
-import digiplot2 from "../assets/images/digiplot/digiplot2.png"
-import digiplot3 from "../assets/images/digiplot/digiplot3.png"
-import digiplot4 from "../assets/images/digiplot/digiplot4.png"
-import digiplot5 from "../assets/images/digiplot/digiplot5.png"
+import digiplot1 from "../assets/images/digiplot/digiplot1.png";
+import digiplot2 from "../assets/images/digiplot/digiplot2.png";
+import digiplot3 from "../assets/images/digiplot/digiplot3.png";
+import digiplot4 from "../assets/images/digiplot/digiplot4.png";
+import digiplot5 from "../assets/images/digiplot/digiplot5.png";
 
+//Import images for vuka-wifi project
+import vuka1 from "../assets/images/vuka-wifi/vuka1.png";
+import vuka2 from "../assets/images/vuka-wifi/vuka2.png";
+import vuka3 from "../assets/images/vuka-wifi/vuka3.png";
+import vuka4 from "../assets/images/vuka-wifi/vuka4.png";
+import vuka5 from "../assets/images/vuka-wifi/vuka5.png";
 
 // Import images for recruitment project
 import jobs1 from "../assets/images/jobs/jobs1.png";
@@ -301,8 +307,22 @@ const projectImages = {
     kms11,
     kms12,
   ],
+  vuka: [vuka1, vuka2, vuka3, vuka4, vuka5],
   digiplot: [digiplot1, digiplot2, digiplot3, digiplot4, digiplot5],
-  lako: [lako1, lako2, lako3, lako4, lako5, lako6, lako7, lako8, lako9, lako10, lako11, lako12],
+  lako: [
+    lako1,
+    lako2,
+    lako3,
+    lako4,
+    lako5,
+    lako6,
+    lako7,
+    lako8,
+    lako9,
+    lako10,
+    lako11,
+    lako12,
+  ],
   eac: [eac1, eac2, eac3, eac4, eac5, eac6, eac7, eac8, eac9, eac10],
   jobs: [jobs1, jobs02, jobs2, jobs3, jobs4, jobs5, jobs6, jobs7, jobs8, jobs9],
   elite: [
@@ -418,10 +438,28 @@ const projectImages = {
     teflex12,
     teflex13,
     teflex14,
-  ],  
+  ],
 };
 
 export const projects = [
+  {
+    name: "Vuka-Wifi",
+    description:
+      "A comprehensive, production-grade WiFi billing system frontend built with React, TailwindCSS V4, and modern web technologies. This system provides both a customer-facing captive portal and an admin dashboard for managing WiFi access and payments.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Typescript",
+      "Daraja API",
+      "TailwindCss",
+      "Framer Motion",
+    ],
+    images: projectImages.vuka,
+    githubLink: "https://github.com/supa-modo/vuka-wifi-billing-system",
+    liveLink: "https://vuka-wifi.vercel.app/",
+  },
   {
     name: "Digiplot Property Management",
     description:
@@ -449,7 +487,7 @@ export const projects = [
     githubLink: "https://github.com/supa-modo/Personal-FInance-Tracker-client",
     liveLink: "https://personal-finance-tracker-eight-green.vercel.app/",
   },
-  
+
   {
     name: "Lako",
     description:
